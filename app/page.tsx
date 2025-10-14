@@ -147,7 +147,7 @@ export default function Home() {
             Ready to Transform Your Organization?
           </h2>
           <p className="text-xl mb-8 text-white/90">
-            Let's discuss how we can help you become a company of the future.
+            Let&apos;s discuss how we can help you become a company of the future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/contact" variant="secondary" size="lg">

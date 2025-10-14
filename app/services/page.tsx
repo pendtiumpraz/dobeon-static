@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
-import Card from '@/components/Card';
 import Button from '@/components/Button';
 
 export const metadata: Metadata = {
@@ -261,7 +260,7 @@ export default function Services() {
             Ready to Begin Your Transformation Journey?
           </h2>
           <p className="text-xl mb-8 text-white/90">
-            Let's discuss how our services can help you achieve your strategic objectives.
+            Let&apos;s discuss how our services can help you achieve your strategic objectives.
           </p>
           <Button href="/contact" variant="secondary" size="lg">
             Schedule a Consultation

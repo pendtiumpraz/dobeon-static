@@ -92,7 +92,7 @@ export default function Contact() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Information</h2>
             <p className="text-lg text-gray-600 mb-8">
-              We're here to answer your questions and discuss how our expertise can help transform your organization.
+              We&apos;re here to answer your questions and discuss how our expertise can help transform your organization.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -144,7 +144,7 @@ export default function Contact() {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                 <p className="text-green-800 font-semibold">Thank you for your message!</p>
-                <p className="text-green-700">We'll get back to you as soon as possible.</p>
+                <p className="text-green-700">We&apos;ll get back to you as soon as possible.</p>
               </div>
             )}
 
