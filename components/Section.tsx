@@ -1,4 +1,7 @@
+'use client';
+
 import { ReactNode } from 'react';
+import { useInView, getAnimationClasses } from '@/lib/animations';
 
 interface SectionProps {
   children: ReactNode;
@@ -19,6 +22,8 @@ export default function Section({
   className = '',
   dark = false,
 }: SectionProps) {
+  const { ref, isInView } = useInView();
+
   return (
     <section
       id={id}
@@ -26,19 +31,30 @@ export default function Section({
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {(title || subtitle || description) && (
-          <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+          <div
+            ref={ref as React.RefObject<HTMLDivElement>}
+            className="max-w-3xl mx-auto text-center mb-12 md:mb-16"
+          >
             {subtitle && (
-              <p className={`text-sm md:text-base font-semibold uppercase tracking-wider mb-3 ${dark ? 'text-primary-light' : 'text-primary'}`}>
+              <p className={`text-sm md:text-base font-semibold uppercase tracking-wider mb-3 ${
+                dark ? 'text-primary-light' : 'text-primary'
+              } ${getAnimationClasses('slideDown', isInView)}`}>
                 {subtitle}
               </p>
             )}
             {title && (
-              <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${dark ? 'text-white' : 'text-gray-900'}`}>
+              <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${
+                dark ? 'text-white' : 'text-gray-900'
+              } ${getAnimationClasses('fadeIn', isInView)}`}
+              style={{ transitionDelay: '100ms' }}>
                 {title}
               </h2>
             )}
             {description && (
-              <p className={`text-lg ${dark ? 'text-gray-300' : 'text-gray-600'}`}>
+              <p className={`text-lg ${
+                dark ? 'text-gray-300' : 'text-gray-600'
+              } ${getAnimationClasses('fadeIn', isInView)}`}
+              style={{ transitionDelay: '200ms' }}>
                 {description}
               </p>
             )}

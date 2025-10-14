@@ -1,11 +1,15 @@
+'use client';
+
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
 import StructuredData from '@/components/StructuredData';
 import { organizationSchema } from '@/lib/structured-data';
+import { useInView, getAnimationClasses } from '@/lib/animations';
 
 export default function Home() {
+  const { ref: ctaRef, isInView: ctaInView } = useInView();
   const services = [
     {
       title: 'Assess Readiness',
@@ -83,6 +87,7 @@ export default function Home() {
               title={service.title}
               description={service.description}
               icon={service.icon}
+              delay={index * 100}
             />
           ))}
         </div>
@@ -102,13 +107,13 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div
+            <Card
               key={index}
-              className="p-6 bg-gray-800 rounded-lg border border-gray-700 hover:border-primary transition-colors"
-            >
-              <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
+              title={feature.title}
+              description={feature.description}
+              className="bg-gray-800 border-gray-700 hover:border-primary text-white"
+              delay={index * 100}
+            />
           ))}
         </div>
       </Section>
@@ -119,7 +124,7 @@ export default function Home() {
         title="Trusted by Industry Leaders"
         description="Our experts have worked with and advised leading organizations worldwide."
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             'Harvard Medical School',
             'Boston Children\'s Hospital',
@@ -130,26 +135,39 @@ export default function Home() {
             'Novo Nordisk',
             'White House',
           ].map((org, index) => (
-            <div
+            <Card
               key={index}
-              className="flex items-center justify-center p-6 bg-gray-50 rounded-lg"
-            >
-              <span className="text-lg font-semibold text-gray-700 text-center">{org}</span>
-            </div>
+              title={org}
+              description=""
+              hover={true}
+              className="bg-gray-50 border-gray-200 hover:border-primary opacity-70 hover:opacity-100 min-h-[120px] flex items-center justify-center"
+              delay={index * 75}
+            />
           ))}
         </div>
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-primary to-primary-light">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <Section className="bg-gradient-to-br from-primary to-primary-light relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-white rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }}></div>
+        </div>
+
+        <div
+          ref={ctaRef as React.RefObject<HTMLDivElement>}
+          className="max-w-3xl mx-auto text-center text-white relative z-10"
+        >
+          <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${getAnimationClasses('fadeIn', ctaInView)}`}>
             Ready to Transform Your Organization?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className={`text-xl mb-8 text-white/90 ${getAnimationClasses('fadeIn', ctaInView)}`}
+             style={{ transitionDelay: '100ms' }}>
             Let&apos;s discuss how we can help you become a company of the future.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center ${getAnimationClasses('slideUp', ctaInView)}`}
+               style={{ transitionDelay: '200ms' }}>
             <Button href="/contact" variant="secondary" size="lg">
               Get in Touch
             </Button>
