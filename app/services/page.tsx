@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
+import FloatingShapes from '@/components/FloatingShapes';
+import WaveDivider from '@/components/WaveDivider';
+import GlassCard from '@/components/GlassCard';
+import Card from '@/components/Card';
 
 export const metadata: Metadata = {
   title: 'Services - Dobeon',
@@ -155,64 +159,76 @@ export default function Services() {
         subtitle="Our Framework"
         title="Three-Step Transformation Methodology"
         description="Our proven approach guides organizations through every stage of their transformation journey."
+        className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
       >
-        <div className="space-y-16">
-          {coreServices.map((service, index) => (
-            <div
-              key={service.id}
-              id={service.id}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
-            >
-              <div className="flex-1">
-                <div className="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full mb-4">
-                  Step {index + 1}
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
-                  {service.title}
-                </h3>
-                <p className="text-xl text-primary mb-4">{service.tagline}</p>
-                <p className="text-lg text-gray-600 mb-6">{service.description}</p>
+        <FloatingShapes count={6} colors={['#0066ff', '#7C3AED', '#EC4899']} />
 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">What We Do:</h4>
-                  <ul className="space-y-2">
-                    {service.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start">
-                        <svg className="w-6 h-6 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        <span className="text-gray-700">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
+        <div className="space-y-16 relative z-10">
+          {coreServices.map((service, index) => {
+            const gradients: ('blue' | 'purple' | 'pink')[] = ['blue', 'purple', 'pink'];
+            return (
+              <div
+                key={service.id}
+                id={service.id}
+                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
+              >
+                <div className="flex-1">
+                  <div className={`inline-block px-4 py-2 ${index === 0 ? 'gradient-blue' : index === 1 ? 'gradient-purple' : 'gradient-pink'} text-white font-semibold rounded-full mb-4 shadow-lg`}>
+                    Step {index + 1}
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
+                    {service.title}
+                  </h3>
+                  <p className="text-xl text-gradient-vibrant mb-4 font-semibold">{service.tagline}</p>
+                  <p className="text-lg text-gray-600 mb-6">{service.description}</p>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">What We Do:</h4>
+                    <ul className="space-y-2">
+                      {service.details.map((detail, detailIndex) => (
+                        <li key={detailIndex} className="flex items-start">
+                          <svg className="w-6 h-6 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                          </svg>
+                          <span className="text-gray-700">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Expected Outcomes:</h4>
+                    <ul className="space-y-2">
+                      {service.outcomes.map((outcome, outcomeIndex) => (
+                        <li key={outcomeIndex} className="flex items-start">
+                          <svg className="w-6 h-6 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                          <span className="text-gray-700">{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Expected Outcomes:</h4>
-                  <ul className="space-y-2">
-                    {service.outcomes.map((outcome, outcomeIndex) => (
-                      <li key={outcomeIndex} className="flex items-start">
-                        <svg className="w-6 h-6 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span className="text-gray-700">{outcome}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="flex-1 w-full">
+                  <div className={`relative p-12 rounded-2xl shadow-2xl overflow-hidden ${index === 0 ? 'gradient-blue' : index === 1 ? 'gradient-purple' : 'gradient-pink'} text-white`}>
+                    <div className="text-8xl font-bold mb-4 opacity-20">{index + 1}</div>
+                    <h3 className="text-3xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-white/90 text-xl">{service.tagline}</p>
+
+                    {/* Decorative blob */}
+                    <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                  </div>
                 </div>
               </div>
-
-              <div className="flex-1 w-full">
-                <div className="bg-gradient-to-br from-primary to-primary-light rounded-2xl p-12 text-white shadow-2xl">
-                  <div className="text-6xl font-bold mb-4">{index + 1}</div>
-                  <div className="text-2xl font-bold mb-2">{service.title}</div>
-                  <div className="text-primary-light text-lg">{service.tagline}</div>
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </Section>
+
+      {/* Wave Divider */}
+      <WaveDivider color="#1f2937" />
 
       {/* Specializations */}
       <Section
@@ -220,32 +236,50 @@ export default function Services() {
         subtitle="Areas of Expertise"
         title="Deep Domain Specializations"
         description="Our team brings specialized expertise across critical domains in healthcare and technology."
+        className="relative overflow-hidden"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {specializations.map((spec, index) => (
-            <div
-              key={index}
-              className="p-6 bg-gray-800 border border-gray-700 rounded-xl hover:border-primary transition-all"
-            >
-              <div className="text-primary mb-4">{spec.icon}</div>
-              <h3 className="text-xl font-bold mb-3 text-white">{spec.title}</h3>
-              <p className="text-gray-300">{spec.description}</p>
-            </div>
-          ))}
+        {/* Background decorations */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl blob-shape"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '3s' }}></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+          {specializations.map((spec, index) => {
+            const glassGradients: ('blue' | 'purple' | 'orange' | 'cyan' | 'pink')[] = ['blue', 'purple', 'orange', 'cyan', 'pink', 'blue'];
+            return (
+              <GlassCard
+                key={index}
+                gradient={glassGradients[index]}
+                variant="dark"
+                delay={index * 100}
+              >
+                <div className="text-primary mb-4">{spec.icon}</div>
+                <h3 className="text-xl font-bold mb-3 text-white">{spec.title}</h3>
+                <p className="text-gray-300">{spec.description}</p>
+              </GlassCard>
+            );
+          })}
         </div>
       </Section>
+
+      {/* Wave Divider */}
+      <WaveDivider color="#ffffff" flip />
 
       {/* Industries Served */}
       <Section
         subtitle="Industries We Serve"
         title="Healthcare & Life Sciences Expertise"
         description="We work with organizations across the healthcare and life sciences ecosystem."
+        className="relative"
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <FloatingShapes count={5} colors={['#0066ff', '#10B981', '#06B6D4']} />
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="p-6 bg-white border-2 border-gray-200 rounded-lg text-center hover:border-primary hover:shadow-lg transition-all"
+              className="p-6 bg-white border-2 border-gray-200 rounded-lg text-center hover:border-primary hover:shadow-xl transition-all card-gradient-border hover:scale-105 duration-300"
             >
               <span className="font-semibold text-gray-900">{industry}</span>
             </div>
@@ -254,15 +288,23 @@ export default function Services() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-primary to-primary-light">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <Section className="gradient-vibrant relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full blur-3xl blob-shape"></div>
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <FloatingShapes count={8} colors={['#ffffff', '#fef3c7', '#fbcfe8']} />
+
+        <div className="max-w-3xl mx-auto text-center text-white relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Ready to Begin Your Transformation Journey?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-xl md:text-2xl mb-10 text-white/95">
             Let&apos;s discuss how our services can help you achieve your strategic objectives.
           </p>
-          <Button href="/contact" variant="secondary" size="lg">
+          <Button href="/contact" variant="secondary" size="lg" className="shadow-2xl hover:shadow-white/50">
             Schedule a Consultation
           </Button>
         </div>

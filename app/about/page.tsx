@@ -1,6 +1,11 @@
 import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
+import TeamMemberCard from '@/components/TeamMemberCard';
+import FloatingShapes from '@/components/FloatingShapes';
+import WaveDivider from '@/components/WaveDivider';
+import GlassCard from '@/components/GlassCard';
+import StatCounter from '@/components/StatCounter';
 
 export const metadata: Metadata = {
   title: 'About Us - Dobeon',
@@ -120,20 +125,32 @@ export default function About() {
         subtitle="Our Mission"
         title="Transforming Companies Into Companies of the Future"
         description="We partner with healthcare and technology organizations to architect their digital transformation journey. Through rigorous assessment frameworks, strategic gap analysis, and proven implementation methodologies, we position enterprises for sustained competitive advantage in the digital age. Our experts have led transformations at Fortune 500 companies, government agencies, and global health organizations."
+        className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-cyan-50"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-all"
-            >
-              <div className="text-primary mb-4">{value.icon}</div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">{value.title}</h3>
-              <p className="text-gray-600">{value.description}</p>
-            </div>
-          ))}
+        <FloatingShapes count={6} colors={['#0066ff', '#7C3AED', '#00D9FF', '#F59E0B']} />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 relative z-10">
+          {values.map((value, index) => {
+            const gradients: ('blue' | 'purple' | 'orange' | 'cyan')[] = ['blue', 'purple', 'orange', 'cyan'];
+            return (
+              <GlassCard
+                key={index}
+                gradient={gradients[index]}
+                variant="light"
+                animationVariant="scaleIn"
+                delay={index * 100}
+              >
+                <div className="text-primary mb-4">{value.icon}</div>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </GlassCard>
+            );
+          })}
         </div>
       </Section>
+
+      {/* Wave Divider */}
+      <WaveDivider color="#1f2937" />
 
       {/* Team Section */}
       <Section
@@ -142,54 +159,89 @@ export default function About() {
         subtitle="Our Team"
         title="Meet the Experts"
         description="Our team unites exceptional leaders who have pioneered healthcare innovations at Harvard Medical School, led global health initiatives at Gavi and WHO, architected enterprise AI at Google and Deloitte, and advised the White House on precision medicine. Together, we bring unparalleled expertise in transforming healthcare and technology organizations."
+        className="relative overflow-hidden"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="bg-gray-800 border border-gray-700 rounded-xl p-8 hover:border-primary transition-all"
-            >
-              <div className="mb-4">
-                <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-primary-light font-semibold">{member.role}</p>
-              </div>
-              <p className="text-gray-300 mb-4 leading-relaxed">{member.bio}</p>
-              <div className="flex flex-wrap gap-2">
-                {member.expertise.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-3 py-1 bg-primary/20 text-primary-light text-sm rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+        {/* Background decorations */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-[40rem] h-[40rem] bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full blur-3xl blob-shape"></div>
+          <div className="absolute bottom-20 right-20 w-[35rem] h-[35rem] bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-gradient-to-br from-orange-500 to-yellow-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '4s' }}></div>
+        </div>
+
+        <FloatingShapes count={8} colors={['#0066ff', '#7C3AED', '#EC4899', '#00D9FF', '#F59E0B']} />
+
+        {/* Bento Grid Layout for 9 Team Members */}
+        <div className="bento-grid relative z-10">
+          {teamMembers.map((member, index) => {
+            const gradients: ('blue' | 'purple' | 'orange' | 'pink' | 'cyan' | 'green')[] = [
+              'blue', 'purple', 'orange', 'pink', 'cyan', 'green', 'blue', 'purple', 'orange'
+            ];
+            // Featured member (first one - Soleh Ayubi)
+            const featured = index === 0;
+
+            return (
+              <TeamMemberCard
+                key={index}
+                name={member.name}
+                role={member.role}
+                bio={member.bio}
+                expertise={member.expertise}
+                featured={featured}
+                gradient={gradients[index]}
+                delay={index * 100}
+              />
+            );
+          })}
         </div>
       </Section>
+
+      {/* Wave Divider */}
+      <WaveDivider color="#ffffff" flip />
 
       {/* Experience Highlights */}
       <Section
         subtitle="Our Experience"
         title="Trusted by Leading Organizations Worldwide"
+        className="relative bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="text-5xl font-bold text-primary mb-2">100+</div>
-            <div className="text-xl font-semibold text-gray-900 mb-2">Years Combined Experience</div>
-            <p className="text-gray-600">In healthcare transformation, AI implementation, and digital health innovation</p>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-bold text-primary mb-2">Global</div>
-            <div className="text-xl font-semibold text-gray-900 mb-2">Health Impact</div>
-            <p className="text-gray-600">From COVAX vaccine distribution to White House precision medicine initiatives</p>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-bold text-primary mb-2">9</div>
-            <div className="text-xl font-semibold text-gray-900 mb-2">Industry Leaders</div>
-            <p className="text-gray-600">From Harvard, Google, Deloitte, Gavi, and leading Indonesian healthcare systems</p>
-          </div>
+        <FloatingShapes count={5} colors={['#7C3AED', '#EC4899', '#F59E0B']} />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+          <StatCounter
+            end={100}
+            suffix="+"
+            label="Years Combined Experience"
+            description="In healthcare transformation, AI implementation, and digital health innovation"
+            gradient="purple"
+            icon={
+              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            }
+          />
+          <StatCounter
+            end={50}
+            suffix="+"
+            label="Global Health Impact"
+            description="From COVAX vaccine distribution to White House precision medicine initiatives"
+            gradient="pink"
+            icon={
+              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            }
+          />
+          <StatCounter
+            end={9}
+            label="Industry Leaders"
+            description="From Harvard, Google, Deloitte, Gavi, and leading Indonesian healthcare systems"
+            gradient="orange"
+            icon={
+              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            }
+          />
         </div>
       </Section>
     </>
