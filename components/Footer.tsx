@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,11 +23,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">D</span>
-              </div>
-              <span className="text-2xl font-bold text-white">Dobeon</span>
+            <div className="mb-4">
+              <Logo size="md" className="text-white" />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Transforming healthcare and IT organizations into companies of the future through expert consulting, digital innovation, and strategic transformation.
