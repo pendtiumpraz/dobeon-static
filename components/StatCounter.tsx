@@ -9,7 +9,7 @@ interface StatCounterProps {
   prefix?: string;
   label: string;
   description?: string;
-  gradient?: 'blue' | 'purple' | 'orange' | 'pink' | 'cyan';
+  gradient?: 'blue';
   icon?: React.ReactNode;
 }
 
@@ -30,10 +30,6 @@ function StatCounter({
 
   const gradientClasses = {
     blue: 'text-gradient-blue',
-    purple: 'text-gradient-purple',
-    orange: 'bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent',
-    pink: 'bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent',
-    cyan: 'bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent',
   };
 
   // Memoize animation function to prevent re-creation

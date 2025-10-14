@@ -173,13 +173,13 @@ export default function Services() {
                 className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
               >
                 <div className="flex-1">
-                  <div className={`inline-block px-4 py-2 ${index === 0 ? 'gradient-blue' : index === 1 ? 'gradient-purple' : 'gradient-pink'} text-white font-semibold rounded-full mb-4 shadow-lg`}>
+                  <div className="inline-block px-4 py-2 gradient-blue text-white font-semibold rounded-full mb-4 shadow-lg">
                     Step {index + 1}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
                     {service.title}
                   </h3>
-                  <p className="text-xl text-gradient-vibrant mb-4 font-semibold">{service.tagline}</p>
+                  <p className="text-xl text-gradient-blue mb-4 font-semibold">{service.tagline}</p>
                   <p className="text-lg text-gray-600 mb-6">{service.description}</p>
 
                   <div className="mb-6">
@@ -212,7 +212,7 @@ export default function Services() {
                 </div>
 
                 <div className="flex-1 w-full">
-                  <div className={`relative p-12 rounded-2xl shadow-2xl overflow-hidden ${index === 0 ? 'gradient-blue' : index === 1 ? 'gradient-purple' : 'gradient-pink'} text-white`}>
+                  <div className="relative p-12 rounded-2xl shadow-2xl overflow-hidden gradient-blue text-white">
                     <div className="text-8xl font-bold mb-4 opacity-20">{index + 1}</div>
                     <h3 className="text-3xl font-bold mb-2">{service.title}</h3>
                     <p className="text-white/90 text-xl">{service.tagline}</p>
@@ -281,7 +281,7 @@ export default function Services() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="gradient-vibrant relative overflow-hidden">
+      <Section className="gradient-hero relative overflow-hidden">
         {/* Elegant Floating Icons */}
         <FloatingIcons count={10} />
 

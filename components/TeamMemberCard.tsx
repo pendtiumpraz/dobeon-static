@@ -9,7 +9,7 @@ interface TeamMemberCardProps {
   expertise: string[];
   image?: string;
   featured?: boolean;
-  gradient?: 'blue' | 'purple' | 'orange' | 'pink' | 'cyan' | 'green';
+  gradient?: 'blue';
   delay?: number;
 }
 
@@ -26,21 +26,11 @@ export default function TeamMemberCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   const gradientClasses = {
-    blue: 'from-blue-500/20 to-cyan-500/20 border-blue-500/50',
-    purple: 'from-purple-500/20 to-violet-500/20 border-purple-500/50',
-    orange: 'from-orange-500/20 to-amber-500/20 border-orange-500/50',
-    pink: 'from-pink-500/20 to-rose-500/20 border-pink-500/50',
-    cyan: 'from-cyan-500/20 to-teal-500/20 border-cyan-500/50',
-    green: 'from-green-500/20 to-emerald-500/20 border-green-500/50',
+    blue: 'from-blue-500/20 to-blue-600/20 border-blue-500/50',
   };
 
   const badgeGradients = {
-    blue: 'bg-gradient-blue text-white',
-    purple: 'bg-gradient-purple text-white',
-    orange: 'bg-gradient-orange text-white',
-    pink: 'bg-gradient-pink text-white',
-    cyan: 'bg-gradient-cyan text-white',
-    green: 'bg-gradient-green text-white',
+    blue: 'gradient-blue text-white',
   };
 
   return (

@@ -7,7 +7,7 @@ interface CardProps {
   title: string;
   description: string;
   icon?: ReactNode;
-  gradient?: boolean | 'blue' | 'purple' | 'orange' | 'pink' | 'cyan' | 'green';
+  gradient?: boolean | 'blue';
   hover?: boolean;
   className?: string;
   animationVariant?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight' | 'scaleIn';
@@ -26,18 +26,9 @@ export default function Card({
 }: CardProps) {
   const { ref, isInView } = useInView();
 
-  const gradientClasses = {
-    blue: 'gradient-blue text-white',
-    purple: 'gradient-purple text-white',
-    orange: 'gradient-orange text-white',
-    pink: 'gradient-pink text-white',
-    cyan: 'gradient-cyan text-white',
-    green: 'gradient-green text-white',
-  };
-
   const getGradientClass = () => {
-    if (typeof gradient === 'string') {
-      return gradientClasses[gradient as keyof typeof gradientClasses];
+    if (gradient === 'blue') {
+      return 'gradient-blue text-white';
     }
     if (gradient === true) {
       return 'gradient-primary text-white';
