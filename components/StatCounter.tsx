@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback, memo } from 'react';
 
 interface StatCounterProps {
   end: number;
@@ -13,7 +13,7 @@ interface StatCounterProps {
   icon?: React.ReactNode;
 }
 
-export default function StatCounter({
+function StatCounter({
   end,
   duration = 2000,
   suffix = '',
@@ -26,6 +26,7 @@ export default function StatCounter({
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const counterRef = useRef<HTMLDivElement>(null);
+  const animationFrameRef = useRef<number | undefined>(undefined);
 
   const gradientClasses = {
     blue: 'text-gradient-blue',
@@ -35,25 +36,8 @@ export default function StatCounter({
     cyan: 'bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent',
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          animateCounter();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [hasAnimated]);
-
-  const animateCounter = () => {
+  // Memoize animation function to prevent re-creation
+  const animateCounter = useCallback(() => {
     const startTime = Date.now();
     const endTime = startTime + duration;
 
@@ -68,14 +52,49 @@ export default function StatCounter({
       setCount(currentCount);
 
       if (now < endTime) {
-        requestAnimationFrame(updateCounter);
+        animationFrameRef.current = requestAnimationFrame(updateCounter);
       } else {
         setCount(end);
       }
     };
 
-    requestAnimationFrame(updateCounter);
-  };
+    animationFrameRef.current = requestAnimationFrame(updateCounter);
+  }, [duration, end]);
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      setCount(end);
+      setHasAnimated(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animateCounter();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+      observer.disconnect();
+      // Cleanup animation frame on unmount
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [hasAnimated, animateCounter, end]);
 
   return (
     <div
@@ -97,3 +116,6 @@ export default function StatCounter({
     </div>
   );
 }
+
+// Memoize component to prevent unnecessary re-renders
+export default memo(StatCounter);

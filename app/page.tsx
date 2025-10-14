@@ -6,8 +6,7 @@ import Card from '@/components/Card';
 import Button from '@/components/Button';
 import StructuredData from '@/components/StructuredData';
 import FloatingShapes from '@/components/FloatingShapes';
-import ParticleBackground from '@/components/ParticleBackground';
-import WaveDivider from '@/components/WaveDivider';
+import FloatingIcons from '@/components/FloatingIcons';
 import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
 import { organizationSchema } from '@/lib/structured-data';
@@ -86,8 +85,8 @@ export default function Home() {
         description="We guide organizations through a proven methodology to achieve sustainable transformation and lasting competitive advantage."
         className="relative"
       >
-        {/* Floating decorative shapes */}
-        <FloatingShapes count={6} colors={['#0066ff', '#7C3AED', '#00D9FF']} />
+        {/* Floating decorative shapes - reduced and simplified */}
+        <FloatingShapes count={3} colors={['#0066ff', '#7C3AED', '#00D9FF']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
           {services.map((service, index) => {
@@ -111,9 +110,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Wave Divider */}
-      <WaveDivider color="#1f2937" />
-
       {/* Value Proposition */}
       <Section
         dark
@@ -122,10 +118,9 @@ export default function Home() {
         description="Our team brings together decades of experience from leading global healthcare organizations, technology companies, and academic institutions."
         className="relative overflow-hidden"
       >
-        {/* Background decorations */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl blob-shape"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '3s' }}></div>
+        {/* Subtle background decoration - simplified */}
+        <div className="absolute inset-0 opacity-8">
+          <div className="absolute top-1/3 right-1/4 w-[30rem] h-[30rem] bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl blob-shape"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
@@ -146,9 +141,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Wave Divider */}
-      <WaveDivider color="#ffffff" flip />
-
       {/* Stats Section with Animated Counters */}
       <Section
         subtitle="Our Impact in Numbers"
@@ -156,7 +148,7 @@ export default function Home() {
         description="Data-driven outcomes that demonstrate our commitment to excellence"
         className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
       >
-        <FloatingShapes count={5} colors={['#0066ff', '#EC4899', '#7C3AED']} />
+        <FloatingShapes count={2} colors={['#0066ff', '#7C3AED']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
           <StatCounter
@@ -229,17 +221,13 @@ export default function Home() {
 
       {/* CTA Section */}
       <Section className="gradient-vibrant relative overflow-hidden">
-        {/* Particle Background */}
-        <ParticleBackground count={40} color="#ffffff" />
+        {/* Elegant Floating Icons */}
+        <FloatingIcons count={10} />
 
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full blur-3xl blob-shape"></div>
-          <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '1.5s' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '3s' }}></div>
+        {/* Simplified background decoration */}
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-1/4 right-1/4 w-[30rem] h-[30rem] bg-white rounded-full blur-3xl blob-shape"></div>
         </div>
-
-        <FloatingShapes count={8} colors={['#ffffff', '#fef3c7', '#fbcfe8', '#ddd6fe']} />
 
         <div
           ref={ctaRef as React.RefObject<HTMLDivElement>}

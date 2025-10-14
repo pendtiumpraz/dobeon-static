@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import TeamMemberCard from '@/components/TeamMemberCard';
 import FloatingShapes from '@/components/FloatingShapes';
-import WaveDivider from '@/components/WaveDivider';
 import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
 
@@ -127,7 +126,7 @@ export default function About() {
         description="We partner with healthcare and technology organizations to architect their digital transformation journey. Through rigorous assessment frameworks, strategic gap analysis, and proven implementation methodologies, we position enterprises for sustained competitive advantage in the digital age. Our experts have led transformations at Fortune 500 companies, government agencies, and global health organizations."
         className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-cyan-50"
       >
-        <FloatingShapes count={6} colors={['#0066ff', '#7C3AED', '#00D9FF', '#F59E0B']} />
+        <FloatingShapes count={3} colors={['#0066ff', '#7C3AED', '#00D9FF']} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 relative z-10">
           {values.map((value, index) => {
@@ -149,9 +148,6 @@ export default function About() {
         </div>
       </Section>
 
-      {/* Wave Divider */}
-      <WaveDivider color="#1f2937" />
-
       {/* Team Section */}
       <Section
         id="team"
@@ -161,14 +157,10 @@ export default function About() {
         description="Our team unites exceptional leaders who have pioneered healthcare innovations at Harvard Medical School, led global health initiatives at Gavi and WHO, architected enterprise AI at Google and Deloitte, and advised the White House on precision medicine. Together, we bring unparalleled expertise in transforming healthcare and technology organizations."
         className="relative overflow-hidden"
       >
-        {/* Background decorations */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-[40rem] h-[40rem] bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full blur-3xl blob-shape"></div>
-          <div className="absolute bottom-20 right-20 w-[35rem] h-[35rem] bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-gradient-to-br from-orange-500 to-yellow-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '4s' }}></div>
+        {/* Simplified background decoration */}
+        <div className="absolute inset-0 opacity-8">
+          <div className="absolute top-1/3 right-1/3 w-[35rem] h-[35rem] bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full blur-3xl blob-shape"></div>
         </div>
-
-        <FloatingShapes count={8} colors={['#0066ff', '#7C3AED', '#EC4899', '#00D9FF', '#F59E0B']} />
 
         {/* Bento Grid Layout for 9 Team Members */}
         <div className="bento-grid relative z-10">
@@ -195,16 +187,13 @@ export default function About() {
         </div>
       </Section>
 
-      {/* Wave Divider */}
-      <WaveDivider color="#ffffff" flip />
-
       {/* Experience Highlights */}
       <Section
         subtitle="Our Experience"
         title="Trusted by Leading Organizations Worldwide"
         className="relative bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50"
       >
-        <FloatingShapes count={5} colors={['#7C3AED', '#EC4899', '#F59E0B']} />
+        <FloatingShapes count={2} colors={['#7C3AED', '#EC4899']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
           <StatCounter

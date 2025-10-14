@@ -254,6 +254,15 @@ body {
   }
 }
 
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-15px) translateX(8px);
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -266,9 +275,11 @@ body {
 @keyframes morphBlob {
   0%, 100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: scale(1);
   }
   50% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: scale(1.05);
   }
 }
 
@@ -404,8 +415,8 @@ body {
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .hover-glow {
@@ -436,7 +447,7 @@ body {
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .hover-shine {
@@ -520,7 +531,7 @@ body {
 }
 
 .blob-shape {
-  animation: morphBlob 8s ease-in-out infinite, floatSlow 12s ease-in-out infinite;
+  animation: morphBlob 15s ease-in-out infinite;
 }
 
 .particle {

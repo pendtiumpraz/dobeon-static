@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import FloatingShapes from '@/components/FloatingShapes';
-import WaveDivider from '@/components/WaveDivider';
+import FloatingIcons from '@/components/FloatingIcons';
 import GlassCard from '@/components/GlassCard';
 import Card from '@/components/Card';
 
@@ -161,7 +161,7 @@ export default function Services() {
         description="Our proven approach guides organizations through every stage of their transformation journey."
         className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
       >
-        <FloatingShapes count={6} colors={['#0066ff', '#7C3AED', '#EC4899']} />
+        <FloatingShapes count={3} colors={['#0066ff', '#7C3AED', '#EC4899']} />
 
         <div className="space-y-16 relative z-10">
           {coreServices.map((service, index) => {
@@ -227,9 +227,6 @@ export default function Services() {
         </div>
       </Section>
 
-      {/* Wave Divider */}
-      <WaveDivider color="#1f2937" />
-
       {/* Specializations */}
       <Section
         dark
@@ -238,10 +235,9 @@ export default function Services() {
         description="Our team brings specialized expertise across critical domains in healthcare and technology."
         className="relative overflow-hidden"
       >
-        {/* Background decorations */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl blob-shape"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '3s' }}></div>
+        {/* Simplified background decoration */}
+        <div className="absolute inset-0 opacity-8">
+          <div className="absolute top-1/3 left-1/3 w-[32rem] h-[32rem] bg-gradient-to-br from-cyan-400 to-blue-400 rounded-full blur-3xl blob-shape"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
@@ -263,9 +259,6 @@ export default function Services() {
         </div>
       </Section>
 
-      {/* Wave Divider */}
-      <WaveDivider color="#ffffff" flip />
-
       {/* Industries Served */}
       <Section
         subtitle="Industries We Serve"
@@ -273,7 +266,7 @@ export default function Services() {
         description="We work with organizations across the healthcare and life sciences ecosystem."
         className="relative"
       >
-        <FloatingShapes count={5} colors={['#0066ff', '#10B981', '#06B6D4']} />
+        <FloatingShapes count={2} colors={['#0066ff', '#06B6D4']} />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
           {industries.map((industry, index) => (
@@ -289,13 +282,13 @@ export default function Services() {
 
       {/* CTA Section */}
       <Section className="gradient-vibrant relative overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full blur-3xl blob-shape"></div>
-          <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '2s' }}></div>
-        </div>
+        {/* Elegant Floating Icons */}
+        <FloatingIcons count={10} />
 
-        <FloatingShapes count={8} colors={['#ffffff', '#fef3c7', '#fbcfe8']} />
+        {/* Simplified background decoration */}
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-white rounded-full blur-3xl blob-shape"></div>
+        </div>
 
         <div className="max-w-3xl mx-auto text-center text-white relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">

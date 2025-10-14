@@ -2,8 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import FloatingShapes from './FloatingShapes';
-import ParticleBackground from './ParticleBackground';
+import FloatingIcons from './FloatingIcons';
 
 interface HeroProps {
   title: string;
@@ -34,34 +33,18 @@ export default function Hero({
 
   return (
     <section className={`relative overflow-hidden ${gradient ? 'gradient-mesh' : 'bg-gray-50'} pt-32 pb-20 md:pt-40 md:pb-32`}>
-      {/* Gradient Mesh Background */}
+      {/* Gradient Background */}
       {gradient && (
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-cyan-500 opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-cyan-500 opacity-95"></div>
       )}
 
-      {/* Floating Shapes */}
-      <FloatingShapes count={10} />
+      {/* Floating Icons - elegant and subtle */}
+      {gradient && <FloatingIcons count={12} />}
 
-      {/* Particle Background */}
-      {gradient && <ParticleBackground count={60} color="#ffffff" />}
-
-      {/* Decorative animated blob elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl blob-shape"></div>
-        <div className="absolute bottom-20 right-10 w-[30rem] h-[30rem] bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[25rem] h-[25rem] bg-gradient-to-br from-orange-400 to-yellow-500 rounded-full blur-3xl blob-shape" style={{ animationDelay: '4s' }}></div>
+      {/* Subtle decorative blob - reduced from 3 to 1 */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/3 right-1/4 w-[35rem] h-[35rem] bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full blur-3xl blob-shape"></div>
       </div>
-
-      {/* Grid pattern overlay */}
-      {gradient && (
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `
-            linear-gradient(to right, white 1px, transparent 1px),
-            linear-gradient(to bottom, white 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }}></div>
-      )}
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
