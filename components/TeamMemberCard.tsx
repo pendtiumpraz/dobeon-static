@@ -28,10 +28,14 @@ export default function TeamMemberCard({
   return (
     <div
       className={`
-        relative group rounded-3xl overflow-hidden
-        bg-white border border-gray-200
+        relative group rounded-lg overflow-hidden
+        bg-white/95 backdrop-blur-md
+        border-2 border-blue-400/50
+        shadow-[0_0_20px_rgba(59,130,246,0.3)]
+        hover:shadow-[0_0_40px_rgba(59,130,246,0.6)]
+        hover:border-blue-500
         transition-all duration-700
-        hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3
+        hover:-translate-y-2
         ${featured ? 'bento-featured' : ''}
         animate-fade-in-up
       `}
@@ -39,6 +43,16 @@ export default function TeamMemberCard({
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >
+      {/* HUD Corner decorations */}
+      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-blue-500"></div>
+      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-blue-500"></div>
+      <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-blue-500"></div>
+      <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-blue-500"></div>
+
+      {/* Animated scan line */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-scan-line"></div>
+      </div>
       {/* Header with Gradient Background */}
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-600 p-6 md:p-8">
         {/* Animated background patterns */}
@@ -167,10 +181,8 @@ export default function TeamMemberCard({
         <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 blur-xl pointer-events-none"></div>
       </div>
 
-      {/* Hover border glow effect */}
-      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-        <div className="absolute inset-0 rounded-3xl border-2 border-blue-400/50 shadow-2xl shadow-blue-500/20"></div>
-      </div>
+      {/* Hover glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
     </div>
   );
 }
