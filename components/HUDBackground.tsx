@@ -28,15 +28,14 @@ export default function HUDBackground({ variant = 'full' }: HUDBackgroundProps) 
 
   return (
     <div ref={parallaxRef} className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Blurry floating orbs - parallax - MUCH STRONGER */}
-      <div data-parallax="0.1" className="absolute top-20 left-10 w-96 h-96 bg-blue-500/40 rounded-full blur-3xl animate-float-slow shadow-[0_0_100px_rgba(59,130,246,0.6)]"></div>
-      <div data-parallax="0.15" className="absolute top-40 right-20 w-[30rem] h-[30rem] bg-cyan-400/35 rounded-full blur-3xl animate-float-gentle shadow-[0_0_120px_rgba(6,182,212,0.5)]"></div>
-      <div data-parallax="0.08" className="absolute bottom-40 left-1/3 w-[28rem] h-[28rem] bg-blue-600/30 rounded-full blur-3xl animate-pulse shadow-[0_0_100px_rgba(37,99,235,0.5)]"></div>
+      {/* Blurry floating orbs - parallax */}
+      <div data-parallax="0.1" className="absolute top-20 left-10 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-float-slow"></div>
+      <div data-parallax="0.15" className="absolute top-40 right-20 w-80 h-80 bg-cyan-400/15 rounded-full blur-3xl animate-float-gentle"></div>
+      <div data-parallax="0.08" className="absolute bottom-40 left-1/3 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
       {variant === 'full' && (
         <>
-          <div data-parallax="0.12" className="absolute top-1/2 right-1/4 w-80 h-80 bg-cyan-500/40 rounded-full blur-3xl animate-float-gentle shadow-[0_0_110px_rgba(6,182,212,0.6)]"></div>
-          <div data-parallax="0.07" className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400/35 rounded-full blur-3xl animate-float-slow shadow-[0_0_100px_rgba(59,130,246,0.5)]"></div>
-          <div data-parallax="0.09" className="absolute top-1/4 left-1/2 w-96 h-96 bg-cyan-600/30 rounded-full blur-3xl animate-pulse shadow-[0_0_120px_rgba(8,145,178,0.4)]"></div>
+          <div data-parallax="0.12" className="absolute top-1/2 right-1/4 w-60 h-60 bg-cyan-500/20 rounded-full blur-3xl animate-float-gentle"></div>
+          <div data-parallax="0.07" className="absolute bottom-20 right-10 w-56 h-56 bg-blue-400/15 rounded-full blur-2xl animate-float-slow"></div>
         </>
       )}
 

@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import TeamMemberCard from '@/components/TeamMemberCard';
-import HUDCard from '@/components/HUDCard';
-import HUDBackground from '@/components/HUDBackground';
 import FloatingShapes from '@/components/FloatingShapes';
 import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
@@ -128,31 +126,46 @@ export default function About() {
         subtitle="Our Mission"
         title="Transforming Companies Into Companies of the Future"
         description="We partner with healthcare and technology organizations to architect their digital transformation journey. Through rigorous assessment frameworks, strategic gap analysis, and proven implementation methodologies, we position enterprises for sustained competitive advantage in the digital age. Our experts have led transformations at Fortune 500 companies, government agencies, and global health organizations."
-        className="relative"
+        className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-cyan-50"
       >
-        <HUDBackground variant="full" />
+        <FloatingShapes count={3} colors={['#0066ff', '#7C3AED', '#00D9FF']} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 relative z-10">
-          {values.map((value, index) => (
-            <HUDCard key={index} variant="primary" className="p-5">
-              <div className="text-cyan-400 mb-4">{value.icon}</div>
-              <h3 className="text-lg font-bold mb-2 text-white">{value.title}</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">{value.description}</p>
-            </HUDCard>
-          ))}
+          {values.map((value, index) => {
+            const gradients: ('blue' | 'purple' | 'orange' | 'cyan')[] = ['blue', 'purple', 'orange', 'cyan'];
+            return (
+              <GlassCard
+                key={index}
+                gradient={gradients[index]}
+                variant="light"
+                animationVariant="scaleIn"
+                delay={index * 100}
+              >
+                <div className="text-primary mb-4">{value.icon}</div>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </GlassCard>
+            );
+          })}
         </div>
       </Section>
 
+      {/* LogoLine Divider */}
+      <LogoLine variant="gradient" />
 
       {/* Team Section */}
       <Section
         id="team"
+        dark
         subtitle="Our Team"
         title="Meet the Experts"
         description="Our team unites exceptional leaders who have pioneered healthcare innovations at Harvard Medical School, led global health initiatives at Gavi and WHO, architected enterprise AI at Google and Deloitte, and advised the White House on precision medicine. Together, we bring unparalleled expertise in transforming healthcare and technology organizations."
-        className="relative bg-black"
+        className="relative overflow-hidden"
       >
-        <HUDBackground variant="full" />
+        {/* Simplified background decoration */}
+        <div className="absolute inset-0 opacity-8">
+          <div className="absolute top-1/3 right-1/3 w-[35rem] h-[35rem] bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full blur-3xl blob-shape"></div>
+        </div>
 
         {/* Bento Grid Layout for 9 Team Members */}
         <div className="bento-grid relative z-10">
@@ -179,14 +192,16 @@ export default function About() {
         </div>
       </Section>
 
+      {/* LogoLine Divider */}
+      <LogoLine variant="dotted" />
 
       {/* Experience Highlights */}
       <Section
         subtitle="Our Experience"
         title="Trusted by Leading Organizations Worldwide"
-        className="relative"
+        className="relative bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50"
       >
-        <HUDBackground variant="full" />
+        <FloatingShapes count={2} colors={['#7C3AED', '#EC4899']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
           <StatCounter

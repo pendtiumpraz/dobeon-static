@@ -3,8 +3,6 @@
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Card from '@/components/Card';
-import HUDCard from '@/components/HUDCard';
-import HUDBackground from '@/components/HUDBackground';
 import Button from '@/components/Button';
 import StructuredData from '@/components/StructuredData';
 import FloatingShapes from '@/components/FloatingShapes';
@@ -90,18 +88,19 @@ export default function Home() {
         description="We guide organizations through a proven methodology to achieve sustainable transformation and lasting competitive advantage."
         className="relative"
       >
-        {/* HUD Background with floating elements */}
-        <HUDBackground variant="full" />
+        {/* Floating decorative shapes - reduced and simplified */}
+        <FloatingShapes count={3} colors={['#0066ff', '#7C3AED', '#00D9FF']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
           {services.map((service, index) => (
-            <HUDCard key={index} variant="primary" className="p-6">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="text-cyan-400">{service.icon}</div>
-                <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{service.description}</p>
-              </div>
-            </HUDCard>
+            <Card
+              key={index}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              gradient={index === 0 ? 'blue' : false}
+              delay={index * 100}
+            />
           ))}
         </div>
         <div className="text-center mt-12 relative z-10">
@@ -116,34 +115,41 @@ export default function Home() {
         <ImageCarousel />
       </Section>
 
+      {/* LogoLine Divider */}
+      <LogoLine variant="curve" />
 
       {/* Value Proposition */}
       <Section
         subtitle="Why Choose Dobeon"
         title="World-Class Expertise Meets Innovation"
         description="Our team brings together decades of experience from leading global healthcare organizations, technology companies, and academic institutions."
-        className="relative"
+        className="bg-white"
       >
-        <HUDBackground variant="minimal" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <HUDCard key={index} variant="secondary" className="p-5">
-              <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">{feature.description}</p>
-            </HUDCard>
+            <Card
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              hover={true}
+              className="bg-white border-gray-200 hover:border-primary"
+              delay={index * 100}
+            />
           ))}
         </div>
       </Section>
 
+      {/* LogoLine Divider */}
+      <LogoLine variant="gradient" />
 
       {/* Stats Section with Animated Counters */}
       <Section
         subtitle="Our Impact in Numbers"
         title="Measurable Results, Real Transformation"
         description="Data-driven outcomes that demonstrate our commitment to excellence"
-        className="relative"
+        className="bg-gray-50"
       >
-        <HUDBackground variant="full" />
+        <FloatingShapes count={2} colors={['#0066ff', '#7C3AED']} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
           <StatCounter
@@ -184,16 +190,17 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* LogoLine Divider */}
+      <LogoLine variant="dotted" />
 
       {/* Social Proof */}
       <Section
         subtitle="Our Impact"
         title="Trusted by Industry Leaders"
         description="Our experts have worked with and advised leading organizations worldwide."
-        className="relative"
+        className="bg-white"
       >
-        <HUDBackground variant="minimal" />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             'Harvard Medical School',
             'Boston Children\'s Hospital',
@@ -204,19 +211,27 @@ export default function Home() {
             'Novo Nordisk',
             'White House',
           ].map((org, index) => (
-            <HUDCard key={index} variant="minimal" className="min-h-[120px] flex items-center justify-center p-4">
-              <h3 className="text-center font-semibold text-white text-sm">{org}</h3>
-            </HUDCard>
+            <Card
+              key={index}
+              title={org}
+              description=""
+              hover={true}
+              className="bg-gray-50 border-gray-200 hover:border-primary opacity-70 hover:opacity-100 min-h-[120px] flex items-center justify-center card-gradient-border"
+              delay={index * 75}
+            />
           ))}
         </div>
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 relative overflow-hidden">
-        <HUDBackground variant="full" />
-
+      <Section className="gradient-hero relative overflow-hidden">
         {/* Elegant Floating Icons */}
         <FloatingIcons count={10} />
+
+        {/* Simplified background decoration */}
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-1/4 right-1/4 w-[30rem] h-[30rem] bg-white rounded-full blur-3xl blob-shape"></div>
+        </div>
 
         <div
           ref={ctaRef as React.RefObject<HTMLDivElement>}
