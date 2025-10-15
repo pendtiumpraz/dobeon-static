@@ -35,14 +35,14 @@ export default function LogoLine({
                   <stop offset="100%" stopColor="#0066ff" stopOpacity="0" />
                 </linearGradient>
               </defs>
-              <rect x="0" y="0" width="1000" height="10" fill="url(#gradientLineGradient)" rx="5" />
+              <rect x="0" y="0" width="1000" height="40" fill="url(#gradientLineGradient)" rx="20" />
 
               {/* Animated glow dots */}
-              <circle cx="250" cy="5" r="3" fill="#0066ff" opacity="0.6">
+              <circle cx="250" cy="20" r="8" fill="#0066ff" opacity="0.6">
                 <animate attributeName="cx" values="250;750;250" dur="5s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
               </circle>
-              <circle cx="500" cy="5" r="2.5" fill="#06b6d4" opacity="0.5">
+              <circle cx="500" cy="20" r="6" fill="#06b6d4" opacity="0.5">
                 <animate attributeName="cx" values="500;200;800;500" dur="7s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.5s" repeatCount="indefinite" />
               </circle>
@@ -53,7 +53,7 @@ export default function LogoLine({
       case 'dotted':
         return (
           <div className="w-full max-w-5xl mx-auto relative">
-            <svg viewBox="0 0 1000 20" preserveAspectRatio="none" className="w-full h-5">
+            <svg viewBox="0 0 1000 60" preserveAspectRatio="none" className="w-full h-16">
               <defs>
                 <linearGradient id="dottedLeftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="#0066ff" stopOpacity="0" />
@@ -70,25 +70,25 @@ export default function LogoLine({
               </defs>
 
               {/* Left line */}
-              <rect x="0" y="8" width="470" height="4" fill="url(#dottedLeftGradient)" rx="2" />
+              <rect x="0" y="20" width="460" height="20" fill="url(#dottedLeftGradient)" rx="10" />
 
               {/* Right line */}
-              <rect x="530" y="8" width="470" height="4" fill="url(#dottedRightGradient)" rx="2" />
+              <rect x="540" y="20" width="460" height="20" fill="url(#dottedRightGradient)" rx="10" />
 
               {/* Center animated dot */}
-              <circle cx="500" cy="10" r="6" fill="#0066ff" opacity="0.8">
-                <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" />
+              <circle cx="500" cy="30" r="15" fill="#0066ff" opacity="0.8">
+                <animate attributeName="r" values="15;18;15" dur="2s" repeatCount="indefinite" />
                 <animate attributeName="fill" values="#0066ff; #06b6d4; #0066ff" dur="3s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
               </circle>
 
               {/* Orbiting dots */}
-              <circle r="3" fill="#06b6d4" opacity="0.6">
+              <circle r="8" fill="#06b6d4" opacity="0.6">
                 <animateTransform
                   attributeName="transform"
                   type="rotate"
-                  from="0 500 10"
-                  to="360 500 10"
+                  from="0 500 30"
+                  to="360 500 30"
                   dur="4s"
                   repeatCount="indefinite"
                 />
@@ -97,12 +97,12 @@ export default function LogoLine({
                 </animateMotion>
               </circle>
 
-              <circle r="2.5" fill="#0066ff" opacity="0.5">
+              <circle r="6" fill="#0066ff" opacity="0.5">
                 <animateTransform
                   attributeName="transform"
                   type="rotate"
-                  from="180 500 10"
-                  to="540 500 10"
+                  from="180 500 30"
+                  to="540 500 30"
                   dur="5s"
                   repeatCount="indefinite"
                 />
@@ -112,7 +112,7 @@ export default function LogoLine({
               </circle>
 
               {/* Hidden orbit path */}
-              <path id="orbitPath" d="M 500,10 m -15,0 a 15,15 0 1,0 30,0 a 15,15 0 1,0 -30,0" fill="none" stroke="none" />
+              <path id="orbitPath" d="M 500,30 m -25,0 a 25,25 0 1,0 50,0 a 25,25 0 1,0 -50,0" fill="none" stroke="none" />
             </svg>
           </div>
         );
@@ -128,7 +128,7 @@ export default function LogoLine({
       case 'curve':
         return (
           <div className="w-full max-w-6xl mx-auto relative">
-            <svg viewBox="0 0 1200 60" preserveAspectRatio="none" className="w-full h-16">
+            <svg viewBox="0 0 1200 100" preserveAspectRatio="none" className="w-full h-24">
               <defs>
                 <linearGradient id="curveLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="#0066ff" stopOpacity="0">
@@ -151,29 +151,29 @@ export default function LogoLine({
 
               {/* Main curve line */}
               <path
-                d="M0,30 Q300,10 600,30 T1200,30"
+                d="M0,50 Q300,20 600,50 T1200,50"
                 fill="none"
                 stroke="url(#curveLineGradient)"
-                strokeWidth="5"
+                strokeWidth="20"
                 strokeLinecap="round"
               />
 
               {/* Animated moving dots */}
-              <circle r="4" fill="#0066ff" opacity="0.8">
+              <circle r="10" fill="#0066ff" opacity="0.8">
                 <animateMotion dur="6s" repeatCount="indefinite">
                   <mpath href="#curvePath"/>
                 </animateMotion>
                 <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
               </circle>
 
-              <circle r="3" fill="#06b6d4" opacity="0.6">
+              <circle r="8" fill="#06b6d4" opacity="0.6">
                 <animateMotion dur="8s" repeatCount="indefinite" begin="2s">
                   <mpath href="#curvePath"/>
                 </animateMotion>
                 <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite" />
               </circle>
 
-              <circle r="3.5" fill="#0066ff" opacity="0.7">
+              <circle r="9" fill="#0066ff" opacity="0.7">
                 <animateMotion dur="7s" repeatCount="indefinite" begin="4s">
                   <mpath href="#curvePath"/>
                 </animateMotion>
@@ -181,7 +181,7 @@ export default function LogoLine({
               </circle>
 
               {/* Hidden path for motion */}
-              <path id="curvePath" d="M0,30 Q300,10 600,30 T1200,30" fill="none" stroke="none" />
+              <path id="curvePath" d="M0,50 Q300,20 600,50 T1200,50" fill="none" stroke="none" />
             </svg>
           </div>
         );
@@ -194,9 +194,24 @@ export default function LogoLine({
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className={`logoline py-12 md:py-16 ${className} ${getAnimationClasses('fadeIn', isInView)}`}
+      className={`logoline py-12 md:py-16 relative overflow-hidden ${className} ${getAnimationClasses('fadeIn', isInView)}`}
     >
-      {renderDivider()}
+      {/* Blurry background elements */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="absolute w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-float-slow" style={{ left: '10%', top: '50%', transform: 'translateY(-50%)' }}></div>
+        <div className="absolute w-48 h-48 bg-cyan-400/20 rounded-full blur-3xl animate-float-gentle" style={{ right: '15%', top: '50%', transform: 'translateY(-50%)' }}></div>
+        <div className="absolute w-40 h-40 bg-blue-500/10 rounded-full blur-2xl animate-pulse" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+      </div>
+
+      {/* Back blur layer */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-30 blur-sm">
+        {renderDivider()}
+      </div>
+
+      {/* Front sharp layer */}
+      <div className="relative z-10">
+        {renderDivider()}
+      </div>
     </div>
   );
 }

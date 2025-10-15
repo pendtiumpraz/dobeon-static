@@ -11,6 +11,7 @@ import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
 import LogoLine from '@/components/LogoLine';
 import PlaceholderImage from '@/components/PlaceholderImage';
+import ImageCarousel from '@/components/ImageCarousel';
 import { organizationSchema } from '@/lib/structured-data';
 import { useInView, getAnimationClasses } from '@/lib/animations';
 
@@ -109,37 +110,32 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Image Carousel Section */}
+      <Section className="bg-gray-50">
+        <ImageCarousel />
+      </Section>
+
       {/* LogoLine Divider */}
       <LogoLine variant="curve" />
 
       {/* Value Proposition */}
       <Section
-        dark
         subtitle="Why Choose Dobeon"
         title="World-Class Expertise Meets Innovation"
         description="Our team brings together decades of experience from leading global healthcare organizations, technology companies, and academic institutions."
-        className="relative overflow-hidden"
+        className="bg-white"
       >
-        {/* Subtle background decoration - simplified */}
-        <div className="absolute inset-0 opacity-8">
-          <div className="absolute top-1/3 right-1/4 w-[30rem] h-[30rem] bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl blob-shape"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-          {features.map((feature, index) => {
-            const glassGradients: ('blue' | 'purple' | 'orange' | 'cyan')[] = ['blue', 'purple', 'orange', 'cyan'];
-            return (
-              <GlassCard
-                key={index}
-                gradient={glassGradients[index]}
-                variant="dark"
-                delay={index * 100}
-              >
-                <h3 className="text-xl md:text-2xl font-bold mb-3 text-white">{feature.title}</h3>
-                <p className="leading-relaxed text-white/80">{feature.description}</p>
-              </GlassCard>
-            );
-          })}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <Card
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              hover={true}
+              className="bg-white border-gray-200 hover:border-primary"
+              delay={index * 100}
+            />
+          ))}
         </div>
       </Section>
 
@@ -151,7 +147,7 @@ export default function Home() {
         subtitle="Our Impact in Numbers"
         title="Measurable Results, Real Transformation"
         description="Data-driven outcomes that demonstrate our commitment to excellence"
-        className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
+        className="bg-gray-50"
       >
         <FloatingShapes count={2} colors={['#0066ff', '#7C3AED']} />
 
@@ -202,7 +198,7 @@ export default function Home() {
         subtitle="Our Impact"
         title="Trusted by Industry Leaders"
         description="Our experts have worked with and advised leading organizations worldwide."
-        className="relative"
+        className="bg-white"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[

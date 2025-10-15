@@ -96,67 +96,64 @@ export default function TeamMemberCard({
       </div>
 
       {/* Content */}
-      <div className="p-6 md:p-8 bg-white relative">
-        {/* Bio Section */}
-        <div className="mb-6">
+      <div className="p-6 bg-white relative">
+        {/* Bio Section - Collapsed by default */}
+        <div className={`mb-4 transition-all duration-500 ${isExpanded ? 'mb-6' : ''}`}>
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">About</h4>
+            <div className="w-1 h-5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
+            <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider">About</h4>
           </div>
           <div
             className={`
-              text-gray-600 leading-relaxed text-sm md:text-base overflow-hidden transition-all duration-500
-              ${isExpanded ? 'max-h-[600px]' : 'max-h-24'}
+              text-gray-600 leading-relaxed text-sm overflow-hidden transition-all duration-500 relative
+              ${isExpanded ? 'max-h-96' : 'max-h-16'}
             `}
           >
             {bio}
+            {!isExpanded && (
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+            )}
           </div>
-          {!isExpanded && (
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-          )}
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent mb-6"></div>
+        {isExpanded && <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent mb-4"></div>}
 
         {/* Expertise Section */}
-        <div className="mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Expertise</h4>
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-3">
+            <div className="w-1 h-5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
+            <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider">Expertise</h4>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {expertise.slice(0, isExpanded ? expertise.length : 3).map((skill, index) => (
+          <div className="flex flex-wrap gap-1.5">
+            {expertise.slice(0, isExpanded ? expertise.length : 2).map((skill, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 text-xs md:text-sm rounded-xl border border-blue-200 hover:border-blue-400 hover:shadow-md transition-all duration-300 font-medium"
+                className="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 text-xs rounded-lg border border-blue-200 hover:border-blue-400 hover:shadow-sm transition-all duration-300 font-medium"
               >
                 {skill}
               </span>
             ))}
-            {!isExpanded && expertise.length > 3 && (
-              <span className="px-4 py-2 text-gray-500 text-xs md:text-sm font-medium flex items-center gap-1">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"/>
-                </svg>
-                {expertise.length - 3} more
+            {!isExpanded && expertise.length > 2 && (
+              <span className="px-3 py-1.5 text-gray-500 text-xs font-medium">
+                +{expertise.length - 2}
               </span>
             )}
           </div>
         </div>
 
         {/* Expand/Collapse Button */}
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center pt-2">
           <button
-            className="group/btn flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold rounded-xl hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5"
+            className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5"
             onClick={(e) => {
               e.stopPropagation();
               setIsExpanded(!isExpanded);
             }}
           >
-            <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
+            <span>{isExpanded ? 'Less' : 'More'}</span>
             <svg
-              className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+              className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -167,7 +164,7 @@ export default function TeamMemberCard({
         </div>
 
         {/* Decorative corner accent */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 blur-2xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 blur-xl pointer-events-none"></div>
       </div>
 
       {/* Hover border glow effect */}

@@ -275,25 +275,25 @@ export default function Contact() {
       <LogoLine variant="curve" />
 
       {/* Map or Additional Info */}
-      <Section dark className="text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+      <Section className="text-center bg-gray-50">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
           Global Reach, Local Expertise
         </h2>
-        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           With team members and partnerships across North America, Asia, and Europe, we bring global best practices with deep local market understanding.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="p-6 bg-gray-800 rounded-xl">
-            <h3 className="text-2xl font-bold text-white mb-2">North America</h3>
-            <p className="text-gray-300">Boston, San Francisco</p>
+          <div className="p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-all duration-300">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">North America</h3>
+            <p className="text-gray-600">Boston, San Francisco</p>
           </div>
-          <div className="p-6 bg-gray-800 rounded-xl">
-            <h3 className="text-2xl font-bold text-white mb-2">Asia Pacific</h3>
-            <p className="text-gray-300">Jakarta, Singapore</p>
+          <div className="p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-all duration-300">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Asia Pacific</h3>
+            <p className="text-gray-600">Jakarta, Singapore</p>
           </div>
-          <div className="p-6 bg-gray-800 rounded-xl">
-            <h3 className="text-2xl font-bold text-white mb-2">Europe</h3>
-            <p className="text-gray-300">London, Amsterdam</p>
+          <div className="p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-primary transition-all duration-300">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Europe</h3>
+            <p className="text-gray-600">London, Amsterdam</p>
           </div>
         </div>
       </Section>

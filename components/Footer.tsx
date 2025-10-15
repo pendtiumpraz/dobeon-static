@@ -32,22 +32,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-gray-300 relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
-      </div>
+    <footer className="bg-gray-50 border-t border-gray-200 relative overflow-hidden">
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20 max-w-7xl relative z-10">
         {/* Top Section - Newsletter/CTA */}
-        <div className="mb-16 pb-12 border-b border-gray-700/50">
+        <div className="mb-16 pb-12 border-b border-gray-200">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 Ready to Transform Your Organization?
               </h3>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-600 text-lg">
                 Join leading healthcare and technology companies on their transformation journey.
               </p>
             </div>
@@ -63,7 +58,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="/about"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl hover:bg-white/20 transition-all duration-300 font-semibold text-center"
+                className="px-8 py-4 bg-white border-2 border-gray-300 text-gray-900 rounded-xl hover:border-primary hover:bg-gray-50 transition-all duration-300 font-semibold text-center"
               >
                 Learn More
               </Link>
@@ -75,21 +70,21 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <Logo size="md" className="text-white" />
+              <Logo size="md" className="text-gray-900" />
             </div>
-            <p className="text-gray-400 mb-8 max-w-sm leading-relaxed">
+            <p className="text-gray-600 mb-8 max-w-sm leading-relaxed">
               Empowering healthcare and technology organizations through strategic digital transformation, cutting-edge AI solutions, and world-class consulting expertise.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <a href="mailto:contact@dobeon.com" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group">
+              <a href="mailto:contact@dobeon.com" className="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors group">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
                 <span className="group-hover:translate-x-1 transition-transform">contact@dobeon.com</span>
               </a>
-              <a href="tel:+15551234567" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group">
+              <a href="tel:+15551234567" className="flex items-center gap-3 text-gray-600 hover:text-primary transition-colors group">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
@@ -102,7 +97,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+                className="w-11 h-11 rounded-xl bg-white border border-gray-300 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary hover:bg-blue-50 transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -113,7 +108,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+                className="w-11 h-11 rounded-xl bg-white border border-gray-300 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary hover:bg-blue-50 transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -124,7 +119,7 @@ export default function Footer() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+                className="w-11 h-11 rounded-xl bg-white border border-gray-300 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary hover:bg-blue-50 transition-all duration-300 hover:scale-110"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -136,14 +131,14 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <h3 className="text-gray-900 font-bold text-lg mb-5 flex items-center gap-2">
               <span className="w-1 h-6 bg-gradient-to-b from-primary to-cyan-500 rounded-full"></span>
               Company
             </h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
+                  <Link href={link.href} className="text-gray-600 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
                     {link.label}
                   </Link>
                 </li>
@@ -153,14 +148,14 @@ export default function Footer() {
 
           {/* Services Links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <h3 className="text-gray-900 font-bold text-lg mb-5 flex items-center gap-2">
               <span className="w-1 h-6 bg-gradient-to-b from-primary to-cyan-500 rounded-full"></span>
               Services
             </h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
+                  <Link href={link.href} className="text-gray-600 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
                     {link.label}
                   </Link>
                 </li>
@@ -170,14 +165,14 @@ export default function Footer() {
 
           {/* Expertise Links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <h3 className="text-gray-900 font-bold text-lg mb-5 flex items-center gap-2">
               <span className="w-1 h-6 bg-gradient-to-b from-primary to-cyan-500 rounded-full"></span>
               Expertise
             </h3>
             <ul className="space-y-3">
               {footerLinks.expertise.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
+                  <Link href={link.href} className="text-gray-600 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
                     {link.label}
                   </Link>
                 </li>
@@ -187,14 +182,14 @@ export default function Footer() {
 
           {/* Resources Links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <h3 className="text-gray-900 font-bold text-lg mb-5 flex items-center gap-2">
               <span className="w-1 h-6 bg-gradient-to-b from-primary to-cyan-500 rounded-full"></span>
               Resources
             </h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
+                  <Link href={link.href} className="text-gray-600 hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block">
                     {link.label}
                   </Link>
                 </li>
@@ -204,15 +199,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-          <p className="text-gray-500 text-sm">
+        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+          <p className="text-gray-600 text-sm">
             &copy; {currentYear} Dobeon. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <Link href="/privacy" className="text-gray-500 hover:text-primary transition-colors duration-200">
+            <Link href="/privacy" className="text-gray-600 hover:text-primary transition-colors duration-200">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-500 hover:text-primary transition-colors duration-200">
+            <Link href="/terms" className="text-gray-600 hover:text-primary transition-colors duration-200">
               Terms of Service
             </Link>
           </div>
