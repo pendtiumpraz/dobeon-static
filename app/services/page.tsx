@@ -227,7 +227,7 @@ export default function Services() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="curve" />
+      <LogoLine variant="gradient" />
 
       {/* Specializations */}
       <Section
@@ -262,7 +262,7 @@ export default function Services() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="abstract" flip />
+      <LogoLine variant="curve" />
 
       {/* Industries Served */}
       <Section

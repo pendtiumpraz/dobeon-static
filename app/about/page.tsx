@@ -151,7 +151,7 @@ export default function About() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="flow" />
+      <LogoLine variant="gradient" />
 
       {/* Team Section */}
       <Section
@@ -193,7 +193,7 @@ export default function About() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="wave" flip />
+      <LogoLine variant="dotted" />
 
       {/* Experience Highlights */}
       <Section

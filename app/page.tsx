@@ -110,7 +110,7 @@ export default function Home() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="abstract" />
+      <LogoLine variant="curve" />
 
       {/* Value Proposition */}
       <Section
@@ -144,7 +144,7 @@ export default function Home() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="flow" flip />
+      <LogoLine variant="gradient" />
 
       {/* Stats Section with Animated Counters */}
       <Section
@@ -195,7 +195,7 @@ export default function Home() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="wave" />
+      <LogoLine variant="dotted" />
 
       {/* Social Proof */}
       <Section

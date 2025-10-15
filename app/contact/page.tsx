@@ -97,7 +97,7 @@ export default function Contact() {
           />
         </div>
 
-        <LogoLine variant="curve" />
+        <LogoLine variant="dotted" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           {/* Contact Information */}
@@ -272,7 +272,7 @@ export default function Contact() {
       </Section>
 
       {/* LogoLine Divider */}
-      <LogoLine variant="abstract" />
+      <LogoLine variant="curve" />
 
       {/* Map or Additional Info */}
       <Section dark className="text-center">
