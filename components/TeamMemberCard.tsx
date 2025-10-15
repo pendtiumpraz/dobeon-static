@@ -40,7 +40,7 @@ export default function TeamMemberCard({
       onMouseLeave={() => setIsExpanded(false)}
     >
       {/* Header with Gradient Background */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-600 p-8 md:p-10">
+      <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-600 p-6 md:p-8">
         {/* Animated background patterns */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl animate-float-slow"></div>
@@ -59,8 +59,8 @@ export default function TeamMemberCard({
 
         <div className="relative z-10">
           {/* Profile placeholder/avatar */}
-          <div className="flex justify-center mb-6">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-white/20 backdrop-blur-md border-4 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
+          <div className="flex justify-center mb-4">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/20 backdrop-blur-md border-4 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
               {image ? (
                 <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
               ) : (
@@ -72,14 +72,14 @@ export default function TeamMemberCard({
           </div>
 
           {/* Name */}
-          <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+          <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-2">
             {name}
           </h3>
 
           {/* Featured Badge */}
           {featured && (
-            <div className="flex justify-center mb-3">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white text-sm font-semibold">
+            <div className="flex justify-center mb-2">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white text-xs font-semibold">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
@@ -89,53 +89,53 @@ export default function TeamMemberCard({
           )}
 
           {/* Role */}
-          <p className="text-center text-white/95 text-base md:text-lg font-medium px-4">
+          <p className="text-center text-white/95 text-sm md:text-base font-medium px-4">
             {role}
           </p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6 bg-white relative">
+      <div className="p-4 bg-white relative">
         {/* Bio Section - Collapsed by default */}
-        <div className={`mb-4 transition-all duration-500 ${isExpanded ? 'mb-6' : ''}`}>
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-1 h-5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
+        <div className={`mb-3 transition-all duration-500 ${isExpanded ? 'mb-4' : ''}`}>
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
             <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider">About</h4>
           </div>
           <div
             className={`
-              text-gray-600 leading-relaxed text-sm overflow-hidden transition-all duration-500 relative
-              ${isExpanded ? 'max-h-96' : 'max-h-16'}
+              text-gray-600 leading-relaxed text-xs overflow-hidden transition-all duration-500 relative
+              ${isExpanded ? 'max-h-96' : 'max-h-12'}
             `}
           >
             {bio}
             {!isExpanded && (
-              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
             )}
           </div>
         </div>
 
         {/* Divider */}
-        {isExpanded && <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent mb-4"></div>}
+        {isExpanded && <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent mb-3"></div>}
 
         {/* Expertise Section */}
-        <div className="mb-4">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-1 h-5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
+        <div className="mb-3">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
             <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider">Expertise</h4>
           </div>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1">
             {expertise.slice(0, isExpanded ? expertise.length : 2).map((skill, index) => (
               <span
                 key={index}
-                className="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 text-xs rounded-lg border border-blue-200 hover:border-blue-400 hover:shadow-sm transition-all duration-300 font-medium"
+                className="px-2 py-1 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 text-xs rounded-lg border border-blue-200 hover:border-blue-400 hover:shadow-sm transition-all duration-300 font-medium"
               >
                 {skill}
               </span>
             ))}
             {!isExpanded && expertise.length > 2 && (
-              <span className="px-3 py-1.5 text-gray-500 text-xs font-medium">
+              <span className="px-2 py-1 text-gray-500 text-xs font-medium">
                 +{expertise.length - 2}
               </span>
             )}
@@ -143,9 +143,9 @@ export default function TeamMemberCard({
         </div>
 
         {/* Expand/Collapse Button */}
-        <div className="flex justify-center pt-2">
+        <div className="flex justify-center pt-1">
           <button
-            className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5"
+            className="flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5"
             onClick={(e) => {
               e.stopPropagation();
               setIsExpanded(!isExpanded);
@@ -153,7 +153,7 @@ export default function TeamMemberCard({
           >
             <span>{isExpanded ? 'Less' : 'More'}</span>
             <svg
-              className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+              className={`w-3 h-3 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
