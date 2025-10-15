@@ -20,15 +20,15 @@ export default function PlaceholderImage({
   const getGradient = () => {
     switch (type) {
       case 'healthcare':
-        return 'from-blue-400 via-cyan-400 to-teal-400';
+        return 'from-blue-400 via-cyan-400 to-blue-500';
       case 'tech':
-        return 'from-purple-400 via-blue-400 to-cyan-400';
+        return 'from-blue-500 via-cyan-400 to-blue-400';
       case 'data':
-        return 'from-orange-400 via-pink-400 to-purple-400';
+        return 'from-cyan-400 via-blue-400 to-blue-600';
       case 'team':
         return 'from-blue-500 via-blue-400 to-cyan-400';
       case 'service':
-        return 'from-blue-400 via-purple-400 to-pink-400';
+        return 'from-blue-400 via-cyan-500 to-blue-500';
       default:
         return 'from-blue-500 via-cyan-400 to-blue-300';
     }

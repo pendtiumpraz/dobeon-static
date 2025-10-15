@@ -87,8 +87,11 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative group rounded-lg hover:bg-blue-50"
+                className="px-4 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative group rounded-lg hover:bg-blue-50 flex items-center gap-2"
               >
+                <span className="text-gray-500 group-hover:text-primary transition-colors duration-300">
+                  {link.icon}
+                </span>
                 {link.label}
                 <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-primary to-cyan-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100 origin-left"></span>
               </Link>
