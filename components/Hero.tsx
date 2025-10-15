@@ -35,7 +35,7 @@ export default function Hero({
     <section className={`relative overflow-hidden ${gradient ? 'gradient-mesh' : 'bg-gray-50'} pt-32 pb-20 md:pt-40 md:pb-32`}>
       {/* Gradient Background */}
       {gradient && (
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-cyan-500 opacity-95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-blue-600 to-cyan-500 opacity-95"></div>
       )}
 
       {/* Floating Icons - elegant and subtle */}
