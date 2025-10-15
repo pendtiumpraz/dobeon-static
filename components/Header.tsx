@@ -9,10 +9,42 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' },
-    { href: '/contact', label: 'Contact' },
+    {
+      href: '/',
+      label: 'Home',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+      )
+    },
+    {
+      href: '/about',
+      label: 'About Us',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+      )
+    },
+    {
+      href: '/services',
+      label: 'Services',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      )
+    },
+    {
+      href: '/contact',
+      label: 'Contact',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      )
+    },
   ];
 
   useEffect(() => {
@@ -38,41 +70,44 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white shadow-lg'
-          : 'bg-white shadow-sm'
+          ? 'bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-100'
+          : 'bg-white shadow-md'
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-8 lg:px-12 max-w-7xl">
-        <div className="flex items-center justify-between h-18">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Logo size="md" />
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-primary font-medium transition-colors duration-300 relative group py-2"
+                className="px-4 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative group rounded-lg hover:bg-blue-50"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-primary to-cyan-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100 origin-left"></span>
               </Link>
             ))}
             <Link
               href="/contact"
-              className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary-dark hover:scale-102 transition-all duration-300 font-medium shadow-md hover:shadow-lg"
+              className="ml-4 px-7 py-3 bg-gradient-to-r from-primary to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 font-semibold flex items-center gap-2 group"
             >
               Get Started
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-primary"
+            className="md:hidden p-2.5 rounded-xl hover:bg-blue-50 transition-all duration-300 text-primary hover:scale-110"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
@@ -81,7 +116,7 @@ export default function Header() {
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
+              strokeWidth="2.5"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
@@ -127,37 +162,46 @@ export default function Header() {
               </div>
 
               {/* Menu Links */}
-              <div className="flex-1 flex flex-col justify-start px-8 pt-4 space-y-2">
+              <div className="flex-1 flex flex-col justify-start px-6 pt-4 space-y-3">
                 {navLinks.map((link, index) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-gray-800 hover:text-primary font-medium text-lg py-4 border-b border-gray-100 transition-colors duration-200 opacity-0 animate-slide-left"
+                    className="group flex items-center gap-4 px-4 py-4 rounded-xl text-gray-800 hover:text-primary hover:bg-blue-50 font-medium text-lg transition-all duration-300 opacity-0 animate-slide-left hover:translate-x-2"
                     style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'forwards' }}
                   >
-                    {link.label}
+                    <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 text-primary group-hover:from-primary group-hover:to-blue-600 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+                      {link.icon}
+                    </div>
+                    <span className="flex-1">{link.label}</span>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-primary transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                    </svg>
                   </Link>
                 ))}
               </div>
 
               {/* Bottom Section */}
-              <div className="p-8 space-y-6">
+              <div className="p-6 space-y-6 border-t border-gray-100">
                 <Link
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block w-full px-6 py-3.5 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300 font-medium text-center shadow-md"
+                  className="group flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 font-semibold text-center hover:-translate-y-1"
                 >
                   Get Started
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
                 </Link>
 
                 {/* Social Icons */}
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center gap-3">
                   <a
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary transition-colors duration-200"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 flex items-center justify-center text-primary hover:from-primary hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300 hover:scale-110 hover:shadow-lg"
                     aria-label="LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -168,7 +212,7 @@ export default function Header() {
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary transition-colors duration-200"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 flex items-center justify-center text-primary hover:from-primary hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300 hover:scale-110 hover:shadow-lg"
                     aria-label="Twitter"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -177,7 +221,7 @@ export default function Header() {
                   </a>
                   <a
                     href="mailto:contact@dobeon.com"
-                    className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary transition-colors duration-200"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 flex items-center justify-center text-primary hover:from-primary hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300 hover:scale-110 hover:shadow-lg"
                     aria-label="Email"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

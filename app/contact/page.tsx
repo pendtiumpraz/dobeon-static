@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
+import LogoLine from '@/components/LogoLine';
+import PlaceholderImage from '@/components/PlaceholderImage';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -87,7 +89,17 @@ export default function Contact() {
       />
 
       <Section id="contact-form">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="mb-12">
+          <PlaceholderImage
+            type="healthcare"
+            aspectRatio="16/9"
+            className="max-w-4xl mx-auto"
+          />
+        </div>
+
+        <LogoLine variant="curve" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           {/* Contact Information */}
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Information</h2>
@@ -258,6 +270,9 @@ export default function Contact() {
           </div>
         </div>
       </Section>
+
+      {/* LogoLine Divider */}
+      <LogoLine variant="abstract" />
 
       {/* Map or Additional Info */}
       <Section dark className="text-center">

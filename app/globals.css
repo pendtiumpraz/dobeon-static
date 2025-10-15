@@ -250,6 +250,24 @@ body {
   }
 }
 
+@keyframes shimmerSlow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes gradientShiftAlt {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
@@ -628,4 +646,45 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #0052cc, #0066ff);
+}
+
+/* LogoLine Divider Styles */
+.logoline {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logoline--divider {
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+.logoline--accent {
+  margin: 2rem 0;
+  padding: 1rem 0;
+}
+
+/* Placeholder Image Styles */
+.placeholder-image {
+  position: relative;
+  background-color: #f3f4f6;
+  min-height: 200px;
+}
+
+/* Animate gradient shift for placeholder */
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradientShiftAlt 8s ease infinite;
+}
+
+.animate-shimmer-slow {
+  animation: shimmerSlow 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
 }

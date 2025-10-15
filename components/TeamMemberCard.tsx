@@ -25,21 +25,13 @@ export default function TeamMemberCard({
 }: TeamMemberCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const gradientClasses = {
-    blue: 'from-blue-500/20 to-blue-600/20 border-blue-500/50',
-  };
-
-  const badgeGradients = {
-    blue: 'gradient-blue text-white',
-  };
-
   return (
     <div
       className={`
-        relative group rounded-2xl overflow-hidden
-        bg-gradient-to-br ${gradientClasses[gradient]}
-        border-2 transition-all duration-500
-        hover:shadow-2xl hover:-translate-y-2
+        relative group rounded-3xl overflow-hidden
+        bg-white border border-gray-200
+        transition-all duration-700
+        hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3
         ${featured ? 'bento-featured' : ''}
         animate-fade-in-up
       `}
@@ -47,87 +39,141 @@ export default function TeamMemberCard({
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >
-      {/* Background Image/Placeholder */}
-      <div className="aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
-        {image ? (
-          <img src={image} alt={name} className="w-full h-full object-cover" />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <svg
-              className="w-24 h-24 text-gray-600"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-            </svg>
-          </div>
-        )}
+      {/* Header with Gradient Background */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-600 p-8 md:p-10">
+        {/* Animated background patterns */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-300 rounded-full blur-2xl animate-float-gentle"></div>
+        </div>
 
-        {/* Gradient Overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-t ${gradientClasses[gradient]} opacity-60`} />
+        {/* Decorative dots pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg width="100%" height="100%">
+            <pattern id={`dots-${name}`} x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="white" />
+            </pattern>
+            <rect x="0" y="0" width="100%" height="100%" fill={`url(#dots-${name})`} />
+          </svg>
+        </div>
 
-        {/* Featured Badge */}
-        {featured && (
-          <div className="absolute top-4 right-4">
-            <div className={`${badgeGradients[gradient]} px-3 py-1 rounded-full text-sm font-semibold shadow-lg`}>
-              Featured
+        <div className="relative z-10">
+          {/* Profile placeholder/avatar */}
+          <div className="flex justify-center mb-6">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-white/20 backdrop-blur-md border-4 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
+              {image ? (
+                <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
+              ) : (
+                <svg className="w-12 h-12 md:w-16 md:h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+              )}
             </div>
           </div>
-        )}
-      </div>
 
-      {/* Content */}
-      <div className="p-6 bg-white relative">
-        {/* Name and Role */}
-        <div className="mb-3">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">{name}</h3>
-          <p className={`font-semibold text-sm md:text-base ${badgeGradients[gradient]} px-3 py-1 rounded-full inline-block`}>
+          {/* Name */}
+          <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+            {name}
+          </h3>
+
+          {/* Featured Badge */}
+          {featured && (
+            <div className="flex justify-center mb-3">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white text-sm font-semibold">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Featured Expert
+              </span>
+            </div>
+          )}
+
+          {/* Role */}
+          <p className="text-center text-white/95 text-base md:text-lg font-medium px-4">
             {role}
           </p>
         </div>
+      </div>
 
-        {/* Bio - Expandable */}
-        <div
-          className={`
-            text-gray-600 leading-relaxed mb-4 overflow-hidden transition-all duration-300
-            ${isExpanded ? 'max-h-96' : 'max-h-20'}
-          `}
-        >
-          {bio}
-        </div>
-
-        {/* Expertise Tags */}
-        <div className="flex flex-wrap gap-2">
-          {expertise.slice(0, isExpanded ? expertise.length : 3).map((skill, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 bg-gray-100 text-gray-700 text-xs md:text-sm rounded-full border border-gray-300 hover:border-primary transition-colors"
-            >
-              {skill}
-            </span>
-          ))}
-          {!isExpanded && expertise.length > 3 && (
-            <span className="px-3 py-1 text-gray-500 text-xs md:text-sm">
-              +{expertise.length - 3} more
-            </span>
+      {/* Content */}
+      <div className="p-6 md:p-8 bg-white relative">
+        {/* Bio Section */}
+        <div className="mb-6">
+          <div className="flex items-center gap-2 mb-3">
+            <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
+            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">About</h4>
+          </div>
+          <div
+            className={`
+              text-gray-600 leading-relaxed text-sm md:text-base overflow-hidden transition-all duration-500
+              ${isExpanded ? 'max-h-[600px]' : 'max-h-24'}
+            `}
+          >
+            {bio}
+          </div>
+          {!isExpanded && (
+            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
           )}
         </div>
 
-        {/* Expand Indicator */}
-        <div className="mt-4 text-center">
-          <div className={`inline-flex items-center text-sm font-semibold ${badgeGradients[gradient]} px-4 py-2 rounded-full transition-all duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent mb-6"></div>
+
+        {/* Expertise Section */}
+        <div className="mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
+            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Expertise</h4>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {expertise.slice(0, isExpanded ? expertise.length : 3).map((skill, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 text-xs md:text-sm rounded-xl border border-blue-200 hover:border-blue-400 hover:shadow-md transition-all duration-300 font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+            {!isExpanded && expertise.length > 3 && (
+              <span className="px-4 py-2 text-gray-500 text-xs md:text-sm font-medium flex items-center gap-1">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"/>
+                </svg>
+                {expertise.length - 3} more
+              </span>
+            )}
           </div>
         </div>
 
+        {/* Expand/Collapse Button */}
+        <div className="flex justify-center pt-4">
+          <button
+            className="group/btn flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold rounded-xl hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsExpanded(!isExpanded);
+            }}
+          >
+            <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
+            <svg
+              className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+
         {/* Decorative corner accent */}
-        <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${gradientClasses[gradient]} opacity-30 blur-2xl pointer-events-none`} />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 blur-2xl pointer-events-none"></div>
       </div>
 
-      {/* Hover border glow */}
-      <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none border-2 ${gradientClasses[gradient].split(' ')[2]} shadow-lg`} />
+      {/* Hover border glow effect */}
+      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div className="absolute inset-0 rounded-3xl border-2 border-blue-400/50 shadow-2xl shadow-blue-500/20"></div>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,8 @@ import FloatingShapes from '@/components/FloatingShapes';
 import FloatingIcons from '@/components/FloatingIcons';
 import GlassCard from '@/components/GlassCard';
 import Card from '@/components/Card';
+import LogoLine from '@/components/LogoLine';
+import PlaceholderImage from '@/components/PlaceholderImage';
 
 export const metadata: Metadata = {
   title: 'Services - Dobeon',
@@ -212,20 +214,20 @@ export default function Services() {
                 </div>
 
                 <div className="flex-1 w-full">
-                  <div className="relative p-12 rounded-2xl shadow-2xl overflow-hidden gradient-blue text-white">
-                    <div className="text-8xl font-bold mb-4 opacity-20">{index + 1}</div>
-                    <h3 className="text-3xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-white/90 text-xl">{service.tagline}</p>
-
-                    {/* Decorative blob */}
-                    <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-                  </div>
+                  <PlaceholderImage
+                    type="service"
+                    aspectRatio="4/3"
+                    className="shadow-2xl"
+                  />
                 </div>
               </div>
             );
           })}
         </div>
       </Section>
+
+      {/* LogoLine Divider */}
+      <LogoLine variant="curve" />
 
       {/* Specializations */}
       <Section
@@ -258,6 +260,9 @@ export default function Services() {
           })}
         </div>
       </Section>
+
+      {/* LogoLine Divider */}
+      <LogoLine variant="abstract" flip />
 
       {/* Industries Served */}
       <Section

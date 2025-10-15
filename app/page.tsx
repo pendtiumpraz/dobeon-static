@@ -9,6 +9,8 @@ import FloatingShapes from '@/components/FloatingShapes';
 import FloatingIcons from '@/components/FloatingIcons';
 import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
+import LogoLine from '@/components/LogoLine';
+import PlaceholderImage from '@/components/PlaceholderImage';
 import { organizationSchema } from '@/lib/structured-data';
 import { useInView, getAnimationClasses } from '@/lib/animations';
 
@@ -107,6 +109,9 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* LogoLine Divider */}
+      <LogoLine variant="abstract" />
+
       {/* Value Proposition */}
       <Section
         dark
@@ -137,6 +142,9 @@ export default function Home() {
           })}
         </div>
       </Section>
+
+      {/* LogoLine Divider */}
+      <LogoLine variant="flow" flip />
 
       {/* Stats Section with Animated Counters */}
       <Section
@@ -185,6 +193,9 @@ export default function Home() {
           />
         </div>
       </Section>
+
+      {/* LogoLine Divider */}
+      <LogoLine variant="wave" />
 
       {/* Social Proof */}
       <Section
