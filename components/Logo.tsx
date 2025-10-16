@@ -8,18 +8,6 @@ interface LogoProps {
 }
 
 export default function Logo({ className = '', size = 'md', showText = true }: LogoProps) {
-  const sizeValues = {
-    sm: 60,
-    md: 80,
-    lg: 100,
-  };
-
-  const heightValues = {
-    sm: 24,
-    md: 28,
-    lg: 36,
-  };
-
   return (
     <Link href="/" className={`flex items-center gap-3 group ${className}`}>
       {/* Dobeon Logo SVG */}
@@ -27,19 +15,12 @@ export default function Logo({ className = '', size = 'md', showText = true }: L
         <Image
           src="/logo/dobeon 1.svg"
           alt="Dobeon Logo"
-          width={sizeValues[size]}
-          height={heightValues[size]}
+          width={200}
+          height={46}
           className="w-auto h-auto"
           priority
         />
       </div>
-
-      {/* Text - Hidden as logo already contains text */}
-      {showText && (
-        <span className="font-bold tracking-wider text-2xl text-gray-900 group-hover:text-primary transition-colors duration-300">
-
-        </span>
-      )}
     </Link>
   );
 }
