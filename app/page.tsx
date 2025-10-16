@@ -11,7 +11,8 @@ import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
 import PlaceholderImage from '@/components/PlaceholderImage';
 import ImageCarousel from '@/components/ImageCarousel';
-import { organizationSchema } from '@/lib/structured-data';
+import Image from 'next/image';
+import { organizationSchema} from '@/lib/structured-data';
 import { useInView, getAnimationClasses } from '@/lib/animations';
 
 export default function Home() {
@@ -192,23 +193,30 @@ export default function Home() {
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            'Harvard Medical School',
-            'Boston Children\'s Hospital',
-            'Bio Farma',
-            'Deloitte',
-            'Google',
-            'IBM',
-            'Novo Nordisk',
-            'White House',
+            { name: 'Harvard Medical School', logo: '/logo/Harvard.png', width: 140, height: 50 },
+            { name: 'Boston Children\'s Hospital', logo: '/logo/Boston.png', width: 140, height: 50 },
+            { name: 'Bio Farma', logo: '/logo/Biofarma.png', width: 140, height: 50 },
+            { name: 'Deloitte', logo: '/logo/Deloitte.png', width: 140, height: 40 },
+            { name: 'Google', logo: '/logo/Google.png', width: 120, height: 40 },
+            { name: 'IBM', logo: '/logo/IBM_logo.svg.png', width: 100, height: 40 },
+            { name: 'Novo Nordisk', logo: '/logo/Novo.png', width: 140, height: 40 },
+            { name: 'White House', logo: '/logo/Harvard.png', width: 140, height: 50 },
           ].map((org, index) => (
-            <Card
+            <div
               key={index}
-              title={org}
-              description=""
-              hover={true}
-              className="bg-gray-50 border-gray-200 hover:border-primary opacity-70 hover:opacity-100 min-h-[120px] flex items-center justify-center card-gradient-border"
-              delay={index * 75}
-            />
+              className="bg-white border-2 border-gray-200 hover:border-primary rounded-xl opacity-80 hover:opacity-100 min-h-[120px] flex items-center justify-center p-6 transition-all duration-300 hover:shadow-lg card-gradient-border animate-fade-in-up"
+              style={{ animationDelay: `${index * 75}ms` }}
+            >
+              <div className="w-full h-full flex items-center justify-center group">
+                <Image
+                  src={org.logo}
+                  alt={org.name}
+                  width={org.width}
+                  height={org.height}
+                  className="w-auto h-auto max-w-full max-h-[60px] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            </div>
           ))}
         </div>
       </Section>
