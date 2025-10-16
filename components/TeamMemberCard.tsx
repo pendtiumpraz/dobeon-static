@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface TeamMemberCardProps {
   name: string;
@@ -72,11 +73,18 @@ export default function TeamMemberCard({
         </div>
 
         <div className="relative z-10">
-          {/* Profile placeholder/avatar */}
+          {/* Profile photo/avatar */}
           <div className="flex justify-center mb-4">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/20 backdrop-blur-md border-4 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/20 backdrop-blur-md border-4 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl overflow-hidden">
               {image ? (
-                <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
+                <Image
+                  src={image}
+                  alt={name}
+                  width={96}
+                  height={96}
+                  className="w-full h-full object-cover"
+                  priority={featured}
+                />
               ) : (
                 <svg className="w-12 h-12 md:w-16 md:h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />

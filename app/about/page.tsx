@@ -19,54 +19,63 @@ export default function About() {
       role: 'Digital Healthcare & Data Science Expert',
       bio: 'PhD in Health Sciences with extensive global healthcare experience. Currently Vice President Director at PT Bio Farma (Persero), former Director Head of Digital Therapeutics and Data Science at Novo Nordisk. Digital Health Entrepreneurship advisor at Harvard University with two US patents in healthcare innovation.',
       expertise: ['Digital Healthcare', 'Data Science', 'Healthcare Innovation', 'Digital Therapeutics'],
+      image: '/photo/Soleh Ayubi.png',
     },
     {
       name: 'Sai Prasad',
       role: 'Enterprise Data & AI Specialist',
       bio: 'Specialist Leader at Deloitte focusing on Engineering, AI & Data. Expert in enterprise data management, analytics, AI implementation, and business intelligence platforms with deep experience in Life Sciences & Healthcare.',
       expertise: ['Enterprise Data Management', 'AI & Analytics', 'Solution Architecture', 'Conversational AI'],
+      image: '/photo/Sai Prasad.jpg',
     },
     {
       name: 'John Brownstein, PhD',
       role: 'Chief Innovation Officer & Epidemiologist',
       bio: 'Professor at Harvard Medical School and Chief Innovation Officer at Boston Children\'s Hospital. Pioneer in Computational Epidemiology, founder of HealthMap, and advisor to CDC, WHO, and White House on real-time public health surveillance.',
       expertise: ['Computational Epidemiology', 'Digital Health Innovation', 'Public Health Surveillance', 'Healthcare Systems'],
+      image: '/photo/John Brownstein.png',
     },
     {
       name: 'Gajen Sunthara, MSc IT',
       role: 'Healthcare Interoperability Expert',
       bio: 'Former White House Presidential Innovation Fellow and tech-architect for President Obama\'s Precision Medicine Initiative. Founder of 1upHealth, Inc., pioneered early EHR systems at Boston Children\'s Hospital. Currently CTO/tech-cofounder and Senior Advisor for Harvard Medical School.',
       expertise: ['Healthcare Interoperability', 'FHIR Standards', 'Electronic Health Records', 'Precision Medicine'],
+      image: '/photo/Gajen.png',
     },
     {
       name: 'Kerrie Holley, JD',
       role: 'AI & Cloud Architecture Thought Leader',
       bio: 'US National Academy of Engineering member, former executive at Google and Senior VP at Optum (UnitedHealth Group). IBM Fellow Emeritus, author of "AI First Healthcare" and "LLMs and Generative AI for Healthcare". Pioneer in Service-Oriented Architecture.',
       expertise: ['AI & Machine Learning', 'Cloud Architecture', 'Healthcare Technology', 'Enterprise Transformation'],
+      image: '/photo/Kerrie Holley.jpg',
     },
     {
       name: 'Paul Nielsen',
       role: 'Governance & Cyber Security Advisor',
       bio: 'Harvard University graduate with certifications as Certified Mergers & Acquisitions Advisor (CM&AA) and Certified Cyber Security Risk Advisor (CCSRA). Former Director and Chair of COSBOA. Specializes in certified risk mitigation advice for organizations.',
       expertise: ['Business Governance', 'Cyber Security Risk', 'Mergers & Acquisitions', 'Risk Mitigation'],
+      image: '/photo/Paul Nielsen.jpg',
     },
     {
       name: 'Seth Berkeley, MD',
       role: 'Global Health & Vaccines Leader',
       bio: 'Former CEO of Gavi, the Vaccine Alliance (2011-2023), co-founder of COVAX. Founder and former CEO of International AIDS Vaccine Initiative (IAVI). Extensive experience with CDC and Rockefeller Foundation in global health initiatives.',
       expertise: ['Global Health', 'Vaccines & Immunization', 'Infectious Disease Preparedness', 'Healthcare Leadership'],
+      image: '/photo/Seth Berkeley 2.jpeg',
     },
     {
       name: 'Dr. Ivan Sini, MD, Sp.OG, MMIS',
       role: 'Healthcare Leadership & Innovation',
       bio: 'President Commissioner of PT Bundamedik Healthcare System (BMHS). Fellow of the Royal Australian and NZ College of Obstetricians and Gynecologists. Master of Minimally Invasive Surgery from University of Adelaide. Founder of Morula IVF.',
       expertise: ['Healthcare System Management', 'Minimally Invasive Surgery', 'Medical Innovation', 'Healthcare Leadership'],
+      image: '/photo/Ivan Sini 2.jpg',
     },
     {
       name: 'Salman Subakat',
       role: 'Corporate Transformation & Leadership',
       bio: 'CEO of PT Paragon Technology and Innovation, leading a company with over 10,000 employees. Alumnus of Electrical Engineering from Bandung Institute of Technology (ITB). Focuses on corporate transformation, leadership development, and innovation culture.',
       expertise: ['Corporate Transformation', 'Leadership Development', 'Innovation Culture', 'Business Strategy'],
+      image: '/photo/Salman Subakat.jpg',
     },
   ];
 
@@ -179,6 +188,7 @@ export default function About() {
                 role={member.role}
                 bio={member.bio}
                 expertise={member.expertise}
+                image={member.image}
                 featured={featured}
                 gradient="blue"
                 delay={index * 100}
