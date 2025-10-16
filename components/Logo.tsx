@@ -9,15 +9,15 @@ interface LogoProps {
 
 export default function Logo({ className = '', size = 'md', showText = true }: LogoProps) {
   const sizeValues = {
-    sm: 24,
-    md: 32,
-    lg: 48,
+    sm: 80,
+    md: 120,
+    lg: 150,
   };
 
   const heightValues = {
-    sm: 24,
-    md: 32,
-    lg: 48,
+    sm: 32,
+    md: 40,
+    lg: 50,
   };
 
   return (
