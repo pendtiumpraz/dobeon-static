@@ -9,7 +9,6 @@ import FloatingShapes from '@/components/FloatingShapes';
 import FloatingIcons from '@/components/FloatingIcons';
 import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
-import LogoLine from '@/components/LogoLine';
 import PlaceholderImage from '@/components/PlaceholderImage';
 import ImageCarousel from '@/components/ImageCarousel';
 import { organizationSchema } from '@/lib/structured-data';
@@ -115,9 +114,6 @@ export default function Home() {
         <ImageCarousel />
       </Section>
 
-      {/* LogoLine Divider */}
-      <LogoLine variant="curve" />
-
       {/* Value Proposition */}
       <Section
         subtitle="Why Choose Dobeon"
@@ -138,9 +134,6 @@ export default function Home() {
           ))}
         </div>
       </Section>
-
-      {/* LogoLine Divider */}
-      <LogoLine variant="gradient" />
 
       {/* Stats Section with Animated Counters */}
       <Section
@@ -189,9 +182,6 @@ export default function Home() {
           />
         </div>
       </Section>
-
-      {/* LogoLine Divider */}
-      <LogoLine variant="dotted" />
 
       {/* Social Proof */}
       <Section

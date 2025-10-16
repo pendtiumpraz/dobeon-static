@@ -6,7 +6,6 @@ import FloatingShapes from '@/components/FloatingShapes';
 import FloatingIcons from '@/components/FloatingIcons';
 import GlassCard from '@/components/GlassCard';
 import Card from '@/components/Card';
-import LogoLine from '@/components/LogoLine';
 import PlaceholderImage from '@/components/PlaceholderImage';
 
 export const metadata: Metadata = {
@@ -226,9 +225,6 @@ export default function Services() {
         </div>
       </Section>
 
-      {/* LogoLine Divider */}
-      <LogoLine variant="gradient" />
-
       {/* Specializations */}
       <Section
         dark
@@ -260,9 +256,6 @@ export default function Services() {
           })}
         </div>
       </Section>
-
-      {/* LogoLine Divider */}
-      <LogoLine variant="curve" />
 
       {/* Industries Served */}
       <Section

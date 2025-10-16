@@ -5,7 +5,6 @@ import TeamMemberCard from '@/components/TeamMemberCard';
 import FloatingShapes from '@/components/FloatingShapes';
 import GlassCard from '@/components/GlassCard';
 import StatCounter from '@/components/StatCounter';
-import LogoLine from '@/components/LogoLine';
 import PlaceholderImage from '@/components/PlaceholderImage';
 
 export const metadata: Metadata = {
@@ -150,9 +149,6 @@ export default function About() {
         </div>
       </Section>
 
-      {/* LogoLine Divider */}
-      <LogoLine variant="gradient" />
-
       {/* Team Section */}
       <Section
         id="team"
@@ -191,9 +187,6 @@ export default function About() {
           })}
         </div>
       </Section>
-
-      {/* LogoLine Divider */}
-      <LogoLine variant="dotted" />
 
       {/* Experience Highlights */}
       <Section

@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
-import LogoLine from '@/components/LogoLine';
 import PlaceholderImage from '@/components/PlaceholderImage';
 
 export default function Contact() {
@@ -96,8 +95,6 @@ export default function Contact() {
             className="max-w-4xl mx-auto"
           />
         </div>
-
-        <LogoLine variant="dotted" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           {/* Contact Information */}
@@ -270,9 +267,6 @@ export default function Contact() {
           </div>
         </div>
       </Section>
-
-      {/* LogoLine Divider */}
-      <LogoLine variant="curve" />
 
       {/* Map or Additional Info */}
       <Section className="text-center bg-gray-50">
