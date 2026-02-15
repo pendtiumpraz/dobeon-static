@@ -156,13 +156,31 @@ export default function Home() {
       <section id="experience" className="relative z-10 w-full px-6 py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Professional Experience</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {/* Using pill badges for list */}
+          {/* Logo Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center mb-12 opacity-80">
             {[
-              "University of Pittsburgh", "Boston Children’s Hospital", "UnitedHealth Group",
-              "Novo Nordisk", "PT Biofarma", "UNICEF", "International Vaccine Institute",
+              { src: "/logo/Biofarma.png", alt: "Biofarma" },
+              { src: "/logo/Boston.png", alt: "Boston Children's Hospital" },
+              { src: "/logo/Deloitte.png", alt: "Deloitte" },
+              { src: "/logo/Google.png", alt: "Google" },
+              { src: "/logo/Harvard.png", alt: "Harvard" },
+              { src: "/logo/IBM_logo.svg.png", alt: "IBM" },
+              { src: "/logo/Novo.png", alt: "Novo Nordisk" },
+            ].map((logo, index) => (
+              <div key={index} className="flex justify-center w-full grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={logo.src} alt={logo.alt} className="h-12 w-auto object-contain" />
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {/* Using pill badges for remaining organizations */}
+            {[
+              "University of Pittsburgh", "UnitedHealth Group",
+              "UNICEF", "International Vaccine Institute",
               "Alvarez & Marsal", "PATH", "IQVIA", "World Health Organization",
-              "Google", "ADB", "The World Bank", "GAVI"
+              "ADB", "The World Bank", "GAVI"
             ].map((org, index) => (
               <span key={index} className="px-6 py-3 bg-white border border-gray-100 rounded-full text-gray-600 text-sm shadow-sm hover:shadow-md transition-shadow cursor-default select-none">
                 {org}
