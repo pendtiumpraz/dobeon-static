@@ -157,7 +157,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Professional Experience</h2>
           {/* Logo Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center mb-12 opacity-80">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center mb-12 opacity-80">
             {[
               { src: "/logo/Biofarma.png", alt: "Biofarma" },
               { src: "/logo/Boston.png", alt: "Boston Children's Hospital" },
@@ -166,25 +166,22 @@ export default function Home() {
               { src: "/logo/Harvard.png", alt: "Harvard" },
               { src: "/logo/IBM_logo.svg.png", alt: "IBM" },
               { src: "/logo/Novo.png", alt: "Novo Nordisk" },
+              { src: "/logo/Pitt.png", alt: "University of Pittsburgh" },
+              { src: "/logo/UnitedHealth.png", alt: "UnitedHealth Group" },
+              { src: "/logo/UNICEF.png", alt: "UNICEF" },
+              { src: "/logo/IVI.png", alt: "International Vaccine Institute" },
+              { src: "/logo/Alvarez.png", alt: "Alvarez & Marsal" },
+              { src: "/logo/PATH.png", alt: "PATH" },
+              { src: "/logo/IQVIA.png", alt: "IQVIA" },
+              { src: "/logo/WHO.png", alt: "World Health Organization" },
+              { src: "/logo/ADB.png", alt: "Asian Development Bank" },
+              { src: "/logo/WorldBank.png", alt: "The World Bank" },
+              { src: "/logo/Gavi.png", alt: "Gavi" },
             ].map((logo, index) => (
-              <div key={index} className="flex justify-center w-full grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110">
+              <div key={index} className="flex justify-center w-full grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110 p-2">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={logo.src} alt={logo.alt} className="h-12 w-auto object-contain" />
+                <img src={logo.src} alt={logo.alt} className="h-16 w-auto object-contain mix-blend-multiply" />
               </div>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            {/* Using pill badges for remaining organizations */}
-            {[
-              "University of Pittsburgh", "UnitedHealth Group",
-              "UNICEF", "International Vaccine Institute",
-              "Alvarez & Marsal", "PATH", "IQVIA", "World Health Organization",
-              "ADB", "The World Bank", "GAVI"
-            ].map((org, index) => (
-              <span key={index} className="px-6 py-3 bg-white border border-gray-100 rounded-full text-gray-600 text-sm shadow-sm hover:shadow-md transition-shadow cursor-default select-none">
-                {org}
-              </span>
             ))}
           </div>
 
