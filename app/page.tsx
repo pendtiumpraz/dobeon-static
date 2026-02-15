@@ -15,8 +15,9 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="relative z-10 w-full px-6 py-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div className="text-2xl font-bold text-gray-700 font-serif tracking-wider">
-          Dobeon <span className="font-light italic text-blue-400">&</span> Advisory
+        <div className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo/dobeon 1.svg" alt="Dobeon Consulting & Advisory" className="h-12 w-auto" />
         </div>
         <div className="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-500">
           <a href="/" className="hover:text-blue-500 transition-colors">Home</a>
@@ -216,7 +217,10 @@ export default function Home() {
 
         <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-300 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
-          <h3 className="text-2xl font-serif text-gray-800 mb-2">Dobeon Consulting & Advisory</h3>
+          <div className="flex items-center justify-center mb-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo/dobeon 1.svg" alt="Dobeon Consulting & Advisory" className="h-16 w-auto" />
+          </div>
           <p className="text-gray-500 uppercase tracking-widest text-xs mb-8">Jakarta | Global Mandates</p>
 
           <a href="mailto:info@dobeon.com" className="text-xl text-blue-600 hover:text-blue-800 border-b-2 border-blue-100 hover:border-blue-300 pb-1 transition-all">
