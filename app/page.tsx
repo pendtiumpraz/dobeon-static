@@ -19,10 +19,8 @@ export default function Home() {
           Dobeon <span className="font-light italic text-blue-400">&</span> Advisory
         </div>
         <div className="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-500">
-          <a href="#about" className="hover:text-blue-500 transition-colors">About</a>
-          <a href="#services" className="hover:text-blue-500 transition-colors">Services</a>
-          <a href="#experience" className="hover:text-blue-500 transition-colors">Experience</a>
-          <a href="#contact" className="hover:text-blue-500 transition-colors">Contact</a>
+          <a href="/" className="hover:text-blue-500 transition-colors">Home</a>
+          <a href="#contact" className="hover:text-blue-500 transition-colors">Contact Us</a>
         </div>
       </nav>
 
