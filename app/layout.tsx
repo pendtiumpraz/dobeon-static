@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,11 +12,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair-display",
+  subsets: ["latin"],
+  weight: ['400', '600', '700'],
+  style: ['normal', 'italic'],
+});
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ['300', '400', '700'],
+});
+
 export const metadata: Metadata = {
-  title: "Dobeon - Healthcare & IT Consulting",
-  description: "Transforming companies into companies of the future through expert healthcare and IT consulting services.",
-  keywords: ["healthcare consulting", "IT consulting", "digital transformation", "healthcare innovation", "enterprise transformation"],
-  authors: [{ name: "Dobeon" }],
+  title: "Dobeon Consulting & Advisory",
+  description: "Dobeon Consulting & Advisory is a boutique advisory firm focused exclusively on complex healthcare and life sciences mandates. Discreet. Strategic. Execution-Centric.",
+  keywords: ["healthcare consulting", "life sciences", "strategic execution", "global health", "digital modernization", "capital strategy"],
+  authors: [{ name: "Dobeon Consulting & Advisory" }],
   icons: {
     icon: [
       { url: "/logo.svg", type: "image/svg+xml" },
@@ -27,8 +38,8 @@ export const metadata: Metadata = {
     apple: "/logo.jpeg",
   },
   openGraph: {
-    title: "Dobeon - Healthcare & IT Consulting",
-    description: "Transforming companies into companies of the future through expert healthcare and IT consulting services.",
+    title: "Dobeon Consulting & Advisory",
+    description: "Discreet. Strategic. Execution-Centric. Boutique advisory firm focused on complex healthcare and life sciences mandates.",
     type: "website",
     images: ["/logo.jpeg"],
   },
@@ -42,13 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${lato.variable} antialiased`}
       >
-        <Header />
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

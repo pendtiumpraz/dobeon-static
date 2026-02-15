@@ -20,7 +20,7 @@ interface FloatingShapesProps {
 
 export default function FloatingShapes({
   count = 3,
-  colors = ['#0066ff', '#00D9FF', '#7C3AED', '#F59E0B', '#EC4899']
+  colors = ['#8AB6D6', '#C4DDEF', '#C8B6A6', '#EBE0D6', '#6C9BC0']
 }: FloatingShapesProps) {
   // Detect mobile for performance optimization
   const [isMobile, setIsMobile] = useState(false);

@@ -1,259 +1,238 @@
 'use client';
 
-import Hero from '@/components/Hero';
-import Section from '@/components/Section';
-import Card from '@/components/Card';
-import Button from '@/components/Button';
-import StructuredData from '@/components/StructuredData';
-import FloatingShapes from '@/components/FloatingShapes';
-import FloatingIcons from '@/components/FloatingIcons';
-import GlassCard from '@/components/GlassCard';
-import StatCounter from '@/components/StatCounter';
-import PlaceholderImage from '@/components/PlaceholderImage';
-import ImageCarousel from '@/components/ImageCarousel';
-import Image from 'next/image';
-import { organizationSchema} from '@/lib/structured-data';
-import { useInView, getAnimationClasses } from '@/lib/animations';
+import React from 'react';
 
 export default function Home() {
-  const { ref: ctaRef, isInView: ctaInView } = useInView();
-  const services = [
-    {
-      title: 'Assess Readiness',
-      description: 'Comprehensive evaluation of your organization\'s digital maturity, infrastructure capabilities, and readiness for transformation into a company of the future.',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-        </svg>
-      ),
-    },
-    {
-      title: 'Identify Gaps',
-      description: 'Expert analysis to pinpoint critical gaps in technology, processes, skills, and organizational structure that prevent you from achieving your transformation goals.',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-        </svg>
-      ),
-    },
-    {
-      title: 'Close Gaps',
-      description: 'Strategic implementation roadmap and hands-on support to bridge identified gaps through proven methodologies, cutting-edge technology, and expert guidance.',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-        </svg>
-      ),
-    },
-  ];
-
-  const features = [
-    {
-      title: 'Healthcare Innovation',
-      description: 'Digital therapeutics, precision medicine, and healthcare interoperability solutions powered by industry-leading expertise.',
-    },
-    {
-      title: 'Enterprise Data & AI',
-      description: 'Advanced analytics, AI/ML implementation, and enterprise data management solutions for data-driven decision making.',
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'End-to-end transformation strategy from assessment to implementation, leveraging global best practices.',
-    },
-    {
-      title: 'Cloud Architecture',
-      description: 'Scalable cloud solutions and modern architecture design for future-ready technology infrastructure.',
-    },
-  ];
-
   return (
-    <>
-      <StructuredData data={organizationSchema} />
+    <div className="relative min-h-screen flex flex-col font-sans text-gray-700 bg-gray-50 overflow-x-hidden">
+
+      {/* Watercolor Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="watercolor-bg blob-1"></div>
+        <div className="watercolor-bg blob-2"></div>
+        <div className="watercolor-bg blob-3"></div>
+      </div>
+
+      {/* Navigation */}
+      <nav className="relative z-10 w-full px-6 py-8 flex justify-between items-center max-w-7xl mx-auto">
+        <div className="text-2xl font-bold text-gray-700 font-serif tracking-wider">
+          Dobeon <span className="font-light italic text-blue-400">&</span> Advisory
+        </div>
+        <div className="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-500">
+          <a href="#about" className="hover:text-blue-500 transition-colors">About</a>
+          <a href="#services" className="hover:text-blue-500 transition-colors">Services</a>
+          <a href="#experience" className="hover:text-blue-500 transition-colors">Experience</a>
+          <a href="#contact" className="hover:text-blue-500 transition-colors">Contact</a>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <Hero
-        subtitle="Healthcare & IT Consulting"
-        title="Transform Your Organization Into a Company of the Future"
-        description="Expert consulting services combining healthcare innovation, digital transformation, and cutting-edge technology to prepare your organization for tomorrow's challenges."
-        ctaText="Start Your Journey"
-        ctaLink="/contact"
-        secondaryCtaText="Learn More"
-        secondaryCtaLink="/about"
-        backgroundImage="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=80"
-      />
-
-      {/* Services Overview */}
-      <Section
-        id="services"
-        subtitle="Our Approach"
-        title="Three-Step Transformation Framework"
-        description="We guide organizations through a proven methodology to achieve sustainable transformation and lasting competitive advantage."
-        className="relative"
-      >
-        {/* Floating decorative shapes - reduced and simplified */}
-        <FloatingShapes count={3} colors={['#0066ff', '#7C3AED', '#00D9FF']} />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              gradient={index === 0 ? 'blue' : false}
-              delay={index * 100}
-            />
-          ))}
-        </div>
-        <div className="text-center mt-12 relative z-10">
-          <Button href="/services" size="lg">
-            Explore Our Services
-          </Button>
-        </div>
-      </Section>
-
-      {/* Image Carousel Section */}
-      <Section className="bg-gray-50">
-        <ImageCarousel />
-      </Section>
-
-      {/* Value Proposition */}
-      <Section
-        subtitle="Why Choose Dobeon"
-        title="World-Class Expertise Meets Innovation"
-        description="Our team brings together decades of experience from leading global healthcare organizations, technology companies, and academic institutions."
-        className="bg-white"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              title={feature.title}
-              description={feature.description}
-              hover={true}
-              className="bg-white border-gray-200 hover:border-primary"
-              delay={index * 100}
-            />
-          ))}
-        </div>
-      </Section>
-
-      {/* Stats Section with Animated Counters */}
-      <Section
-        subtitle="Our Impact in Numbers"
-        title="Measurable Results, Real Transformation"
-        description="Data-driven outcomes that demonstrate our commitment to excellence"
-        className="bg-gray-50"
-      >
-        <FloatingShapes count={2} colors={['#0066ff', '#7C3AED']} />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-          <StatCounter
-            end={100}
-            suffix="+"
-            label="Years Combined Experience"
-            description="In healthcare transformation, AI implementation, and digital health innovation"
-            gradient="blue"
-            icon={
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-              </svg>
-            }
-          />
-          <StatCounter
-            end={9}
-            label="Industry Leaders"
-            description="From Harvard, Google, Deloitte, Gavi, and leading healthcare systems"
-            gradient="blue"
-            icon={
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-              </svg>
-            }
-          />
-          <StatCounter
-            end={50}
-            suffix="+"
-            label="Global Organizations"
-            description="Partnered with Fortune 500 companies and government agencies worldwide"
-            gradient="blue"
-            icon={
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            }
-          />
-        </div>
-      </Section>
-
-      {/* Social Proof */}
-      <Section
-        subtitle="Our Impact"
-        title="Trusted by Industry Leaders"
-        description="Our experts have worked with and advised leading organizations worldwide."
-        className="bg-white"
-      >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { name: 'Harvard Medical School', logo: '/logo/Harvard.png', width: 140, height: 50 },
-            { name: 'Boston Children\'s Hospital', logo: '/logo/Boston.png', width: 140, height: 50 },
-            { name: 'Bio Farma', logo: '/logo/Biofarma.png', width: 140, height: 50 },
-            { name: 'Deloitte', logo: '/logo/Deloitte.png', width: 140, height: 40 },
-            { name: 'Google', logo: '/logo/Google.png', width: 120, height: 40 },
-            { name: 'IBM', logo: '/logo/IBM_logo.svg.png', width: 100, height: 40 },
-            { name: 'Novo Nordisk', logo: '/logo/Novo.png', width: 140, height: 40 },
-            { name: 'White House', logo: '/logo/Harvard.png', width: 140, height: 50 },
-          ].map((org, index) => (
-            <div
-              key={index}
-              className="bg-white border-2 border-gray-200 hover:border-primary rounded-xl opacity-80 hover:opacity-100 min-h-[120px] flex items-center justify-center p-6 transition-all duration-300 hover:shadow-lg card-gradient-border animate-fade-in-up"
-              style={{ animationDelay: `${index * 75}ms` }}
-            >
-              <div className="w-full h-full flex items-center justify-center group">
-                <Image
-                  src={org.logo}
-                  alt={org.name}
-                  width={org.width}
-                  height={org.height}
-                  className="w-auto h-auto max-w-full max-h-[60px] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* CTA Section */}
-      <Section className="gradient-hero relative overflow-hidden">
-        {/* Elegant Floating Icons */}
-        <FloatingIcons count={10} />
-
-        {/* Simplified background decoration */}
-        <div className="absolute inset-0 opacity-15">
-          <div className="absolute top-1/4 right-1/4 w-[30rem] h-[30rem] bg-white rounded-full blur-3xl blob-shape"></div>
-        </div>
-
-        <div
-          ref={ctaRef as React.RefObject<HTMLDivElement>}
-          className="max-w-3xl mx-auto text-center text-white relative z-10"
-        >
-          <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${getAnimationClasses('fadeIn', ctaInView)}`}>
-            Ready to Transform Your Organization?
-          </h2>
-          <p className={`text-xl md:text-2xl mb-10 text-white/95 ${getAnimationClasses('fadeIn', ctaInView)}`}
-             style={{ transitionDelay: '100ms' }}>
-            Let&apos;s discuss how we can help you become a company of the future.
+      <section className="relative z-10 w-full px-6 py-12 md:py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6 animate-fade-in-up">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+            Discreet. <br />
+            <span className="text-blue-300 italic">Strategic.</span> <br />
+            Execution-Centric.
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-md font-light">
+            Dobeon Consulting & Advisory is a boutique advisory firm focused exclusively on complex healthcare and life sciences mandates.
           </p>
-          <div className={`flex flex-col sm:flex-row gap-6 justify-center ${getAnimationClasses('slideUp', ctaInView)}`}
-               style={{ transitionDelay: '200ms' }}>
-            <Button href="/contact" variant="secondary" size="lg" className="shadow-2xl hover:shadow-white/50">
-              Get in Touch
-            </Button>
-            <Button href="/about" variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-xl">
-              Meet Our Team
-            </Button>
+          <div className="pt-4">
+            <a href="#contact" className="inline-block px-8 py-3 border border-gray-300 rounded-full text-gray-600 hover:bg-blue-50 hover:border-blue-200 transition-all text-sm uppercase tracking-wider">
+              Engage With Us
+            </a>
           </div>
         </div>
-      </Section>
-    </>
+
+        {/* Hero Image */}
+        <div className="relative flex justify-center items-center">
+          <div className="relative w-full aspect-square max-w-md">
+            <div className="absolute inset-0 bg-blue-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/hero.jpg"
+              alt="Healthcare Strategy Meeting"
+              className="relative z-10 w-full h-full object-cover organic-mask opacity-90 mix-blend-multiply filter contrast-110 brightness-110"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction / About */}
+      <section id="about" className="relative z-10 w-full px-6 py-20 bg-white/40 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h2 className="text-3xl font-serif text-gray-700 italic">&quot;Translating global ambition into operational reality.&quot;</h2>
+          <p className="text-gray-600 leading-relaxed text-lg">
+            We operate at the intersection of strategy, systems, and execution. We understand how global institutions think—and how local systems actually function.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="relative z-10 w-full px-6 py-24 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What We Do</h2>
+          <div className="w-24 h-1 bg-blue-200 mx-auto rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Service 1: Partnerships */}
+          <div className="service-card rounded-2xl overflow-hidden flex flex-col h-full bg-white/80 border border-white/60">
+            <div className="h-48 w-full relative overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/partnerships.jpg"
+                alt="Global Partnerships"
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90"></div>
+            </div>
+            <div className="p-8 pt-4 flex-1 flex flex-col relative">
+              <div className="absolute -top-10 left-8 w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-400 text-xl font-serif italic shadow-sm border border-white">
+                I
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Global Partnerships & Capital Strategy</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+                We structure cross-border collaborations among governments, pharmaceutical & life science manufacturers, healthcare systems, donors, investors, and multilateral institutions—designed for durability, not ceremony.
+              </p>
+              <p className="text-gray-500 text-xs italic mt-auto pt-4 border-t border-gray-100">
+                Aligning capital architecture with long-term institutional objectives.
+              </p>
+            </div>
+          </div>
+
+          {/* Service 2: Execution */}
+          <div className="service-card rounded-2xl overflow-hidden flex flex-col h-full bg-white/80 border border-white/60">
+            <div className="h-48 w-full relative overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/execution.jpg"
+                alt="Complex Execution"
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90"></div>
+            </div>
+            <div className="p-8 pt-4 flex-1 flex flex-col relative">
+              <div className="absolute -top-10 left-8 w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-orange-300 text-xl font-serif italic shadow-sm border border-white">
+                II
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Complex Healthcare Execution</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+                We advise on the localization of pharmaceuticals, biotech, vaccines, and medical devices through integrated governance design, regulatory alignment, and capability transfer.
+              </p>
+              <p className="text-gray-800 font-medium text-xs mt-auto pt-4 border-t border-gray-100">
+                Execution is not a secondary activity. It is the mandate.
+              </p>
+            </div>
+          </div>
+
+          {/* Service 3: Digital */}
+          <div className="service-card rounded-2xl overflow-hidden flex flex-col h-full bg-white/80 border border-white/60">
+            <div className="h-48 w-full relative overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/digital.jpg"
+                alt="Digital Modernization"
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90"></div>
+            </div>
+            <div className="p-8 pt-4 flex-1 flex flex-col relative">
+              <div className="absolute -top-10 left-8 w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center text-purple-300 text-xl font-serif italic shadow-sm border border-white">
+                III
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Digital & System Modernization</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+                We redesign healthcare and life sciences operations through structured digital transformation aligned with international standards.
+              </p>
+              <p className="text-gray-500 text-xs italic mt-auto pt-4 border-t border-gray-100">
+                Ensuring technology strengthens performance rather than adding complexity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="relative z-10 w-full px-6 py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Professional Experience</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {/* Using pill badges for list */}
+            {[
+              "University of Pittsburgh", "Boston Children’s Hospital", "UnitedHealth Group",
+              "Novo Nordisk", "PT Biofarma", "UNICEF", "International Vaccine Institute",
+              "Alvarez & Marsal", "PATH", "IQVIA", "World Health Organization",
+              "Google", "ADB", "The World Bank", "GAVI"
+            ].map((org, index) => (
+              <span key={index} className="px-6 py-3 bg-white border border-gray-100 rounded-full text-gray-600 text-sm shadow-sm hover:shadow-md transition-shadow cursor-default select-none">
+                {org}
+              </span>
+            ))}
+          </div>
+
+          <p className="text-center mt-10 text-gray-500 text-sm italic max-w-2xl mx-auto">
+            We operate comfortably within global organizations, ministerial offices, manufacturing facilities, hospital systems, capital environments, and customer-facing ecosystems.
+          </p>
+        </div>
+      </section>
+
+      {/* Philosophy Section (Different background) */}
+      <section className="relative z-10 w-full px-6 py-24 bg-blue-900 text-white overflow-hidden">
+        {/* Abstract Decoration */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-800 rounded-full mix-blend-screen filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-100 rounded-full mix-blend-overlay filter blur-3xl opacity-10 translate-x-1/3 translate-y-1/3"></div>
+
+        <div className="relative max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-serif mb-12">Philosophy</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
+              <h4 className="font-bold text-lg mb-2">Strategy must withstand execution.</h4>
+              <p className="text-blue-100 text-sm font-light">Plans that cannot be operationalized are merely suggestions.</p>
+            </div>
+            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
+              <h4 className="font-bold text-lg mb-2">Governance precedes scale.</h4>
+              <p className="text-blue-100 text-sm font-light">Structure creates the stability required for growth.</p>
+            </div>
+            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
+              <h4 className="font-bold text-lg mb-2">Capability transfer defines sovereignty.</h4>
+              <p className="text-blue-100 text-sm font-light">We aim to leave capabilities behind, not dependency.</p>
+            </div>
+            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
+              <h4 className="font-bold text-lg mb-2">Digital transformation must improve performance.</h4>
+              <p className="text-blue-100 text-sm font-light">If it adds complexity without improving optics, it is noise.</p>
+            </div>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-blue-800">
+            <p className="font-serif italic text-xl">&quot;Financial discipline anchors credibility.&quot;</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact / Footer */}
+      <section id="contact" className="relative z-10 w-full px-6 py-24 max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">Engagement</h2>
+        <p className="text-gray-600 mb-12">We accept a limited number of mandates each year to ensure focused execution.</p>
+
+        <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-300 relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
+          <h3 className="text-2xl font-serif text-gray-800 mb-2">Dobeon Consulting & Advisory</h3>
+          <p className="text-gray-500 uppercase tracking-widest text-xs mb-8">Jakarta | Global Mandates</p>
+
+          <a href="mailto:info@dobeon.com" className="text-xl text-blue-600 hover:text-blue-800 border-b-2 border-blue-100 hover:border-blue-300 pb-1 transition-all">
+            info@dobeon.com
+          </a>
+
+          <p className="mt-8 text-xs text-gray-400">Confidential discussions available upon request.</p>
+        </div>
+      </section>
+
+      <footer className="relative z-10 py-8 text-center text-gray-400 text-xs">
+        &copy; {new Date().getFullYear()} Dobeon Consulting & Advisory. All rights reserved.
+      </footer>
+
+    </div>
   );
 }

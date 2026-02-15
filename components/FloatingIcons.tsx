@@ -132,7 +132,7 @@ export default function FloatingIcons({ count = 12 }: FloatingIconsProps) {
     return (
       <div key={icon.id} style={baseStyle}>
         <svg
-          className={icon.type === 'health' ? 'text-primary' : 'text-purple-600'}
+          className={icon.type === 'health' ? 'text-primary' : 'text-secondary-dark'}
           width={isMobile ? '36' : '50'} // Smaller icons on mobile
           height={isMobile ? '36' : '50'}
           viewBox="0 0 24 24"
