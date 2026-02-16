@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col font-sans text-gray-700 bg-gray-50 overflow-x-hidden">
@@ -21,7 +22,7 @@ export default function Home() {
         </div>
         <div className="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-500">
           <a href="/" className="hover:text-blue-500 transition-colors">Home</a>
-          <a href="#contact" className="hover:text-blue-500 transition-colors">Contact Us</a>
+          <a href="/contact" className="hover:text-blue-500 transition-colors">Contact Us</a>
         </div>
       </nav>
 
@@ -33,11 +34,11 @@ export default function Home() {
             <span className="text-blue-300 italic">Strategic.</span> <br />
             Execution-Centric.
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-md font-light">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-md font-light">
             Dobeon Consulting & Advisory is a boutique advisory firm focused exclusively on complex healthcare and life sciences mandates.
           </p>
           <div className="pt-4">
-            <a href="#contact" className="inline-block px-8 py-3 border border-gray-300 rounded-full text-gray-600 hover:bg-blue-50 hover:border-blue-200 transition-all text-sm uppercase tracking-wider">
+            <a href="#contact" className="inline-block px-8 py-3 border border-gray-300 rounded-full text-gray-600 hover:bg-blue-50 hover:border-blue-200 transition-all text-base uppercase tracking-wider">
               Engage With Us
             </a>
           </div>
@@ -61,7 +62,7 @@ export default function Home() {
       <section id="about" className="relative z-10 w-full px-6 py-20 bg-white/40 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-3xl font-serif text-gray-700 italic">&quot;Translating global ambition into operational reality.&quot;</h2>
-          <p className="text-gray-600 leading-relaxed text-lg">
+          <p className="text-gray-600 leading-relaxed text-xl">
             We operate at the intersection of strategy, systems, and execution. We understand how global institutions think—and how local systems actually function.
           </p>
         </div>
@@ -91,10 +92,10 @@ export default function Home() {
                 I
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Global Partnerships & Capital Strategy</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+              <p className="text-gray-600 text-base leading-relaxed mb-4 flex-1">
                 We structure cross-border collaborations among governments, pharmaceutical & life science manufacturers, healthcare systems, donors, investors, and multilateral institutions—designed for durability, not ceremony.
               </p>
-              <p className="text-gray-500 text-xs italic mt-auto pt-4 border-t border-gray-100">
+              <p className="text-gray-500 text-sm italic mt-auto pt-4 border-t border-gray-100">
                 Aligning capital architecture with long-term institutional objectives.
               </p>
             </div>
@@ -116,10 +117,10 @@ export default function Home() {
                 II
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Complex Healthcare Execution</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+              <p className="text-gray-600 text-base leading-relaxed mb-4 flex-1">
                 We advise on the localization of pharmaceuticals, biotech, vaccines, and medical devices through integrated governance design, regulatory alignment, and capability transfer.
               </p>
-              <p className="text-gray-800 font-medium text-xs mt-auto pt-4 border-t border-gray-100">
+              <p className="text-gray-800 font-medium text-sm mt-auto pt-4 border-t border-gray-100">
                 Execution is not a secondary activity. It is the mandate.
               </p>
             </div>
@@ -141,10 +142,10 @@ export default function Home() {
                 III
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Digital & System Modernization</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+              <p className="text-gray-600 text-base leading-relaxed mb-4 flex-1">
                 We redesign healthcare and life sciences operations through structured digital transformation aligned with international standards.
               </p>
-              <p className="text-gray-500 text-xs italic mt-auto pt-4 border-t border-gray-100">
+              <p className="text-gray-500 text-sm italic mt-auto pt-4 border-t border-gray-100">
                 Ensuring technology strengthens performance rather than adding complexity.
               </p>
             </div>
@@ -177,6 +178,9 @@ export default function Home() {
               { src: "/logo/ADB.png", alt: "Asian Development Bank" },
               { src: "/logo/WorldBank.png", alt: "The World Bank" },
               { src: "/logo/Gavi.png", alt: "Gavi" },
+              { src: "/logo/USDS.svg", alt: "US Digital Service" },
+              { src: "/logo/MSD.svg", alt: "MSD" },
+              { src: "/logo/Gates.svg", alt: "Gates Foundation" },
             ].map((logo, index) => (
               <div key={index} className="flex justify-center w-full grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110 p-2">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -185,50 +189,58 @@ export default function Home() {
             ))}
           </div>
 
-          <p className="text-center mt-10 text-gray-500 text-sm italic max-w-2xl mx-auto">
+          <p className="text-center mt-10 text-gray-500 text-base italic max-w-2xl mx-auto">
             We operate comfortably within global organizations, ministerial offices, manufacturing facilities, hospital systems, capital environments, and customer-facing ecosystems.
           </p>
         </div>
       </section>
 
-      {/* Philosophy Section (Different background) */}
-      <section className="relative z-10 w-full px-6 py-24 bg-blue-900 text-white overflow-hidden">
-        {/* Abstract Decoration */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-800 rounded-full mix-blend-screen filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-100 rounded-full mix-blend-overlay filter blur-3xl opacity-10 translate-x-1/3 translate-y-1/3"></div>
-
-        <div className="relative max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-serif mb-12">Philosophy</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
-              <h4 className="font-bold text-lg mb-2">Strategy must withstand execution.</h4>
-              <p className="text-blue-100 text-sm font-light">Plans that cannot be operationalized are merely suggestions.</p>
+      {/* Philosophy Section (Clean, Minimalist) */}
+      <section className="relative z-10 w-full px-6 py-24 bg-gray-50 text-gray-800 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          {/* Text Content */}
+          <div className="space-y-8">
+            <h2 className="text-3xl md:text-5xl font-serif mb-6 text-gray-900 leading-tight">Philosophy</h2>
+            <div className="space-y-6">
+              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+                <h4 className="font-bold text-lg mb-2 text-gray-900">Strategy must withstand execution.</h4>
+                <p className="text-gray-600 text-base font-light">Plans that cannot be operationalized are merely suggestions.</p>
+              </div>
+              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+                <h4 className="font-bold text-lg mb-2 text-gray-900">Governance precedes scale.</h4>
+                <p className="text-gray-600 text-base font-light">Structure creates the stability required for growth.</p>
+              </div>
+              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+                <h4 className="font-bold text-lg mb-2 text-gray-900">Capability transfer defines sovereignty.</h4>
+                <p className="text-gray-600 text-base font-light">We aim to leave capabilities behind, not dependency.</p>
+              </div>
+              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+                <h4 className="font-bold text-lg mb-2 text-gray-900">Digital transformation must improve performance.</h4>
+                <p className="text-gray-600 text-base font-light">If it adds complexity without improving optics, it is noise.</p>
+              </div>
             </div>
-            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
-              <h4 className="font-bold text-lg mb-2">Governance precedes scale.</h4>
-              <p className="text-blue-100 text-sm font-light">Structure creates the stability required for growth.</p>
-            </div>
-            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
-              <h4 className="font-bold text-lg mb-2">Capability transfer defines sovereignty.</h4>
-              <p className="text-blue-100 text-sm font-light">We aim to leave capabilities behind, not dependency.</p>
-            </div>
-            <div className="p-6 border-l-2 border-blue-400 bg-blue-800/30 rounded-r-lg hover:bg-blue-800/50 transition-colors">
-              <h4 className="font-bold text-lg mb-2">Digital transformation must improve performance.</h4>
-              <p className="text-blue-100 text-sm font-light">If it adds complexity without improving optics, it is noise.</p>
+            <div className="pt-8 border-t border-gray-200">
+              <p className="font-serif italic text-xl text-gray-700">&quot;Financial discipline anchors credibility.&quot;</p>
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-blue-800">
-            <p className="font-serif italic text-xl">&quot;Financial discipline anchors credibility.&quot;</p>
+          {/* Visual Content */}
+          <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/philosophy.png"
+              alt="Philosophy Visual"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent"></div>
           </div>
         </div>
       </section>
 
-      {/* Contact / Footer */}
+      {/* Engagement Section */}
       <section id="contact" className="relative z-10 w-full px-6 py-24 max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">Engagement</h2>
-        <p className="text-gray-600 mb-12">We accept a limited number of mandates each year to ensure focused execution.</p>
+        <p className="text-gray-600 mb-12 text-lg">We accept a limited number of mandates each year to ensure focused execution.</p>
 
         <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-300 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
@@ -236,19 +248,20 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo/dobeon 1.svg" alt="Dobeon Consulting & Advisory" className="h-16 w-auto" />
           </div>
-          <p className="text-gray-500 uppercase tracking-widest text-xs mb-8">Jakarta | Global Mandates</p>
+          <div className="text-gray-500 text-sm mb-8 leading-relaxed max-w-lg mx-auto">
+            Sovereign Plaza, 12th Floor, Jl. TB Simatupang No.36, Cilandak, South Jakarta, DKI Jakarta 12430
+          </div>
 
-          <a href="mailto:info@dobeon.com" className="text-xl text-blue-600 hover:text-blue-800 border-b-2 border-blue-100 hover:border-blue-300 pb-1 transition-all">
-            info@dobeon.com
+          <a href="/contact" className="text-xl text-blue-600 hover:text-blue-800 border-b-2 border-blue-100 hover:border-blue-300 pb-1 transition-all">
+            Contact Us
           </a>
 
-          <p className="mt-8 text-xs text-gray-400">Confidential discussions available upon request.</p>
+          <p className="mt-8 text-xs text-gray-400">
+            Confidential discussions available upon request. <br />
+            &copy; {new Date().getFullYear()} Dobeon Consulting & Advisory.
+          </p>
         </div>
       </section>
-
-      <footer className="relative z-10 py-8 text-center text-gray-400 text-xs">
-        &copy; {new Date().getFullYear()} Dobeon Consulting & Advisory. All rights reserved.
-      </footer>
 
     </div>
   );
