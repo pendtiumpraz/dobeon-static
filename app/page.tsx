@@ -172,7 +172,7 @@ export default function Home() {
               { src: "/logo/IBM_logo.svg.png", alt: "IBM" },
               { src: "/logo/IVI.png", alt: "International Vaccine Institute" },
               { src: "/logo/IQVIA.png", alt: "IQVIA" },
-              { src: "/logo/MSD.svg", alt: "MSD" },
+              { src: "/logo/MSD.png", alt: "MSD" },
               { src: "/logo/Novo.png", alt: "Novo Nordisk" },
               { src: "/logo/PATH.png", alt: "PATH" },
               { src: "/logo/WorldBank.png", alt: "The World Bank" },
