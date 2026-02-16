@@ -165,7 +165,7 @@ export default function Home() {
               { src: "/logo/Biofarma.png", alt: "Biofarma" },
               { src: "/logo/Boston.png", alt: "Boston Children's Hospital" },
               { src: "/logo/Deloitte.png", alt: "Deloitte" },
-              { src: "/logo/Gates.svg", alt: "Gates Foundation" },
+              { src: "/logo/Gates.png", alt: "Gates Foundation" },
               { src: "/logo/Gavi.png", alt: "Gavi" },
               { src: "/logo/Google.png", alt: "Google" },
               { src: "/logo/Harvard.png", alt: "Harvard" },
