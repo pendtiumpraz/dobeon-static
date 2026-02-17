@@ -95,7 +95,7 @@ export default function Home() {
               <p className="text-gray-600 text-base leading-relaxed mb-4 flex-1">
                 We structure cross-border collaborations among governments, pharmaceutical & life science manufacturers, healthcare systems, donors, investors, and multilateral institutions—designed for durability, not ceremony.
               </p>
-              <p className="text-gray-500 text-sm italic mt-auto pt-4 border-t border-gray-100">
+              <p className="text-gray-500 text-base italic mt-auto pt-4 border-t border-gray-100">
                 Aligning capital architecture with long-term institutional objectives.
               </p>
             </div>
@@ -120,7 +120,7 @@ export default function Home() {
               <p className="text-gray-600 text-base leading-relaxed mb-4 flex-1">
                 We advise on the localization of pharmaceuticals, biotech, vaccines, and medical devices through integrated governance design, regulatory alignment, and capability transfer.
               </p>
-              <p className="text-gray-800 font-medium text-sm mt-auto pt-4 border-t border-gray-100">
+              <p className="text-gray-500 text-base italic mt-auto pt-4 border-t border-gray-100">
                 Execution is not a secondary activity. It is the mandate.
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function Home() {
               <p className="text-gray-600 text-base leading-relaxed mb-4 flex-1">
                 We redesign healthcare and life sciences operations through structured digital transformation aligned with international standards.
               </p>
-              <p className="text-gray-500 text-sm italic mt-auto pt-4 border-t border-gray-100">
+              <p className="text-gray-500 text-base italic mt-auto pt-4 border-t border-gray-100">
                 Ensuring technology strengthens performance rather than adding complexity.
               </p>
             </div>
@@ -252,16 +252,19 @@ export default function Home() {
             Sovereign Plaza, 12th Floor, Jl. TB Simatupang No.36, Cilandak, South Jakarta, DKI Jakarta 12430
           </div>
 
-          <a href="/contact" className="text-xl text-blue-600 hover:text-blue-800 border-b-2 border-blue-100 hover:border-blue-300 pb-1 transition-all">
-            Contact Us
-          </a>
-
-          <p className="mt-8 text-xs text-gray-400">
-            Confidential discussions available upon request. <br />
-            &copy; {new Date().getFullYear()} Dobeon Consulting & Advisory.
-          </p>
+          <div className="flex flex-col items-center gap-2 mb-8">
+            <a href="/contact" className="text-xl text-blue-600 hover:text-blue-800 border-b-2 border-blue-100 hover:border-blue-300 pb-1 transition-all">
+              Contact Us
+            </a>
+            <span className="text-sm text-gray-400 italic">Confidential discussions available upon request.</span>
+          </div>
         </div>
       </section>
+
+      {/* Copyright Footer */}
+      <footer className="relative z-10 w-full py-6 text-center text-gray-400 text-sm bg-gray-50/50">
+        <p>&copy; {new Date().getFullYear()} Dobeon Consulting & Advisory. All rights reserved.</p>
+      </footer>
 
     </div>
   );
