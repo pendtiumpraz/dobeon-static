@@ -61,7 +61,7 @@ export default function Home() {
       {/* Introduction / About */}
       <section id="about" className="relative z-10 w-full px-6 py-20 bg-white/40 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-serif text-gray-700 italic">&quot;Translating global ambition into operational reality.&quot;</h2>
+          <h2 className="text-3xl font-sans text-gray-700 italic">&quot;Translating global ambition into operational reality.&quot;</h2>
           <p className="text-gray-600 leading-relaxed text-xl">
             We operate at the intersection of strategy, systems, and execution. We understand how global institutions think—and how local systems actually function.
           </p>
@@ -88,7 +88,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90"></div>
             </div>
             <div className="p-8 pt-4 flex-1 flex flex-col relative">
-              <div className="absolute -top-10 left-8 w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-400 text-xl font-serif italic shadow-sm border border-white">
+              <div className="absolute -top-10 left-8 w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-400 text-xl font-sans italic shadow-sm border border-white">
                 I
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Global Partnerships & Capital Strategy</h3>
@@ -113,7 +113,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90"></div>
             </div>
             <div className="p-8 pt-4 flex-1 flex flex-col relative">
-              <div className="absolute -top-10 left-8 w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-orange-300 text-xl font-serif italic shadow-sm border border-white">
+              <div className="absolute -top-10 left-8 w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-orange-300 text-xl font-sans italic shadow-sm border border-white">
                 II
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Complex Healthcare Execution</h3>
@@ -138,7 +138,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90"></div>
             </div>
             <div className="p-8 pt-4 flex-1 flex flex-col relative">
-              <div className="absolute -top-10 left-8 w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center text-purple-300 text-xl font-serif italic shadow-sm border border-white">
+              <div className="absolute -top-10 left-8 w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center text-purple-300 text-xl font-sans italic shadow-sm border border-white">
                 III
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 mt-2">Digital & System Modernization</h3>
@@ -200,7 +200,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <div className="space-y-8">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6 text-gray-900 leading-tight">Philosophy</h2>
+            <h2 className="text-3xl md:text-5xl font-sans mb-6 text-gray-900 leading-tight">Philosophy</h2>
             <div className="space-y-6">
               <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
                 <h4 className="font-bold text-lg mb-2 text-gray-900">Strategy must withstand execution.</h4>
@@ -220,7 +220,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-8 border-t border-gray-200">
-              <p className="font-serif italic text-xl text-gray-700">&quot;Financial discipline anchors credibility.&quot;</p>
+              <p className="font-sans italic text-xl text-gray-700">&quot;Financial discipline anchors credibility.&quot;</p>
             </div>
           </div>
 
