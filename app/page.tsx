@@ -220,7 +220,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-8 border-t border-gray-200">
-              <p className="font-sans italic text-xl text-gray-700">&quot;Financial discipline anchors credibility.&quot;</p>
+              <p className="text-xl font-sans text-gray-700 italic">&quot;Financial discipline anchors credibility.&quot;</p>
             </div>
           </div>
 
