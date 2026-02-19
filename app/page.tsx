@@ -156,7 +156,11 @@ export default function Home() {
       {/* Experience Section */}
       <section id="experience" className="relative z-10 w-full px-6 py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Professional Experience</h2>
+
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Professional Experience</h2>
+            <div className="w-24 h-1 bg-blue-200 mx-auto rounded-full"></div>
+          </div>
           {/* Logo Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center mb-12 opacity-80">
             {[
@@ -197,30 +201,32 @@ export default function Home() {
 
       {/* Philosophy Section (Clean, Minimalist) */}
       <section className="relative z-10 w-full px-6 py-24 bg-gray-50 text-gray-800 overflow-hidden">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Philosophy</h2>
+          <div className="w-24 h-1 bg-blue-200 mx-auto rounded-full"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
-          <div className="space-y-8">
-            <h2 className="text-3xl md:text-5xl font-sans mb-6 text-gray-900 leading-tight">Philosophy</h2>
-            <div className="space-y-6">
-              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Strategy must withstand execution.</h4>
-                <p className="text-gray-600 text-base font-light">Plans that cannot be operationalized are merely suggestions.</p>
-              </div>
-              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Governance precedes scale.</h4>
-                <p className="text-gray-600 text-base font-light">Structure creates the stability required for growth.</p>
-              </div>
-              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Capability transfer defines sovereignty.</h4>
-                <p className="text-gray-600 text-base font-light">We aim to leave capabilities behind, not dependency.</p>
-              </div>
-              <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Digital transformation must improve performance.</h4>
-                <p className="text-gray-600 text-base font-light">If it adds complexity without improving optics, it is noise.</p>
-              </div>
+          <div className="space-y-6">
+            <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">Strategy must withstand execution.</h4>
+              <p className="text-gray-600 text-base font-light">Plans that cannot be operationalized are merely suggestions.</p>
             </div>
-            <div className="pt-8 border-t border-gray-200">
-              <p className="text-xl font-sans text-gray-700 italic">&quot;Financial discipline anchors credibility.&quot;</p>
+            <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">Governance precedes scale.</h4>
+              <p className="text-gray-600 text-base font-light">Structure creates the stability required for growth.</p>
+            </div>
+            <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">Capability transfer defines sovereignty.</h4>
+              <p className="text-gray-600 text-base font-light">We aim to leave capabilities behind, not dependency.</p>
+            </div>
+            <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">Digital transformation must improve performance.</h4>
+              <p className="text-gray-600 text-base font-light">If it adds complexity without improving optics, it is noise.</p>
+            </div>
+            <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">Financial discipline anchors credibility.</h4>
+              <p className="text-gray-600 text-base font-light">Sustainable impact requires fiscal soundness.</p>
             </div>
           </div>
 
@@ -239,7 +245,10 @@ export default function Home() {
 
       {/* Engagement Section */}
       <section id="contact" className="relative z-10 w-full px-6 py-24 max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Engagement</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Engagement</h2>
+          <div className="w-24 h-1 bg-blue-200 mx-auto rounded-full"></div>
+        </div>
         <p className="text-gray-600 mb-12 text-lg">We accept a limited number of mandates each year to ensure focused execution.</p>
 
         <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-300 relative overflow-hidden group">
