@@ -193,7 +193,7 @@ export default function Home() {
             ))}
           </div>
 
-          <p className="text-center mt-10 text-gray-500 text-base italic max-w-2xl mx-auto">
+          <p className="text-center mt-10 text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
             We operate comfortably within global organizations, ministerial offices, manufacturing facilities, hospital systems, capital environments, and customer-facing ecosystems.
           </p>
         </div>
@@ -209,24 +209,24 @@ export default function Home() {
           {/* Text Content */}
           <div className="space-y-6">
             <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-              <h4 className="font-bold text-lg mb-2 text-gray-900">Strategy must withstand execution.</h4>
-              <p className="text-gray-600 text-base font-light">Plans that cannot be operationalized are merely suggestions.</p>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">Strategy must withstand execution.</h4>
+              <p className="text-gray-600 text-base leading-relaxed">Plans that cannot be operationalized are merely suggestions.</p>
             </div>
             <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-              <h4 className="font-bold text-lg mb-2 text-gray-900">Governance precedes scale.</h4>
-              <p className="text-gray-600 text-base font-light">Structure creates the stability required for growth.</p>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">Governance precedes scale.</h4>
+              <p className="text-gray-600 text-base leading-relaxed">Structure creates the stability required for growth.</p>
             </div>
             <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-              <h4 className="font-bold text-lg mb-2 text-gray-900">Capability transfer defines sovereignty.</h4>
-              <p className="text-gray-600 text-base font-light">We aim to leave capabilities behind, not dependency.</p>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">Capability transfer defines sovereignty.</h4>
+              <p className="text-gray-600 text-base leading-relaxed">We aim to leave capabilities behind, not dependency.</p>
             </div>
             <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-              <h4 className="font-bold text-lg mb-2 text-gray-900">Digital transformation must improve performance.</h4>
-              <p className="text-gray-600 text-base font-light">If it adds complexity without improving optics, it is noise.</p>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">Digital transformation must improve performance.</h4>
+              <p className="text-gray-600 text-base leading-relaxed">If it adds complexity without improving optics, it is noise.</p>
             </div>
             <div className="p-6 border-l-2 border-blue-400 bg-white shadow-sm rounded-r-lg hover:shadow-md transition-all">
-              <h4 className="font-bold text-lg mb-2 text-gray-900">Financial discipline anchors credibility.</h4>
-              <p className="text-gray-600 text-base font-light">Sustainable impact requires fiscal soundness.</p>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">Financial discipline anchors credibility.</h4>
+              <p className="text-gray-600 text-base leading-relaxed">Sustainable impact requires fiscal soundness.</p>
             </div>
           </div>
 
@@ -249,7 +249,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Engagement</h2>
           <div className="w-24 h-1 bg-blue-200 mx-auto rounded-full"></div>
         </div>
-        <p className="text-gray-600 mb-12 text-lg">We accept a limited number of mandates each year to ensure focused execution.</p>
+        <p className="text-gray-600 mb-12 text-base leading-relaxed">We accept a limited number of mandates each year to ensure focused execution.</p>
 
         <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-300 relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
@@ -257,7 +257,7 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo/dobeon 1.svg" alt="Dobeon Consulting & Advisory" className="h-16 w-auto" />
           </div>
-          <div className="text-gray-500 text-sm mb-8 leading-relaxed max-w-lg mx-auto">
+          <div className="text-gray-600 text-base leading-relaxed mb-8 max-w-lg mx-auto">
             Sovereign Plaza, 12th Floor, Jl. TB Simatupang No.36, Cilandak, South Jakarta, DKI Jakarta 12430
           </div>
 
