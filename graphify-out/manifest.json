@@ -1,0 +1,597 @@
+{
+  "app/api/contact/route.ts": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "b7c819e719c9f246a748342caf2d3340",
+    "semantic_hash": "b7c819e719c9f246a748342caf2d3340"
+  },
+  "app/contact/page.tsx": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "0523c484989321452a5e7d66feadd85f",
+    "semantic_hash": "0523c484989321452a5e7d66feadd85f"
+  },
+  "app/layout.tsx": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "aaa0c09846d20f9593aac60f0dda9e81",
+    "semantic_hash": "aaa0c09846d20f9593aac60f0dda9e81"
+  },
+  "app/loading.tsx": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "0135e37c38fcd172684ecd05d94f017b",
+    "semantic_hash": "0135e37c38fcd172684ecd05d94f017b"
+  },
+  "app/manifest.ts": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "8036dc95780a68040fb101f493739909",
+    "semantic_hash": "8036dc95780a68040fb101f493739909"
+  },
+  "app/not-found.tsx": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "a0da97379e139ed640e2789ca92cbd78",
+    "semantic_hash": "a0da97379e139ed640e2789ca92cbd78"
+  },
+  "app/page.tsx": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "3be7dfc7f51bec86933811f3b69c7c36",
+    "semantic_hash": "3be7dfc7f51bec86933811f3b69c7c36"
+  },
+  "app/robots.ts": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "a180a980931a86aba678abf7f21a38e2",
+    "semantic_hash": "a180a980931a86aba678abf7f21a38e2"
+  },
+  "app/sitemap.ts": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "e210eac5474ab2db0097ac23c12d4302",
+    "semantic_hash": "e210eac5474ab2db0097ac23c12d4302"
+  },
+  "components/Button.tsx": {
+    "mtime": 1780034859.8147352,
+    "ast_hash": "9aa565d14ddea7e6ab7e99a1bdff62ea",
+    "semantic_hash": "9aa565d14ddea7e6ab7e99a1bdff62ea"
+  },
+  "components/Card.tsx": {
+    "mtime": 1780034859.8147352,
+    "ast_hash": "8f532a8998441419307d955b41aabae1",
+    "semantic_hash": "8f532a8998441419307d955b41aabae1"
+  },
+  "components/Engagement.tsx": {
+    "mtime": 1780034859.8147352,
+    "ast_hash": "bf9d7ca65999ed5ef4ce331cb1a9d857",
+    "semantic_hash": "bf9d7ca65999ed5ef4ce331cb1a9d857"
+  },
+  "components/FloatingIcons.tsx": {
+    "mtime": 1780034859.8147352,
+    "ast_hash": "3f4c9e53a9c4864039985a8b96f71faf",
+    "semantic_hash": "3f4c9e53a9c4864039985a8b96f71faf"
+  },
+  "components/FloatingShapes.tsx": {
+    "mtime": 1780034859.8147352,
+    "ast_hash": "256149e54cfe370ef2a39017d674822e",
+    "semantic_hash": "256149e54cfe370ef2a39017d674822e"
+  },
+  "components/Footer.tsx": {
+    "mtime": 1780034859.8147352,
+    "ast_hash": "d9854d1f13a0ecca98a686929487e65b",
+    "semantic_hash": "d9854d1f13a0ecca98a686929487e65b"
+  },
+  "components/GlassCard.tsx": {
+    "mtime": 1780034859.8147352,
+    "ast_hash": "f34dcebafb12c419542d14ceb8db76eb",
+    "semantic_hash": "f34dcebafb12c419542d14ceb8db76eb"
+  },
+  "components/HUDBackground.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "8c0cf8a2d776b0856bd9dd4cb1ce06fb",
+    "semantic_hash": "8c0cf8a2d776b0856bd9dd4cb1ce06fb"
+  },
+  "components/HUDCard.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "7d912757901c611b0bf7a864aeb8a0cb",
+    "semantic_hash": "7d912757901c611b0bf7a864aeb8a0cb"
+  },
+  "components/Header.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "f9dd5b329c75927c0a7d63583e161432",
+    "semantic_hash": "f9dd5b329c75927c0a7d63583e161432"
+  },
+  "components/Hero.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "51cce754dcef96da5bcf223a18e8fef3",
+    "semantic_hash": "51cce754dcef96da5bcf223a18e8fef3"
+  },
+  "components/ImageCarousel.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "bc821f5f0d556b48fa82cceccef70385",
+    "semantic_hash": "bc821f5f0d556b48fa82cceccef70385"
+  },
+  "components/Logo.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "37ed859b413a52707325c8ca661f0b3a",
+    "semantic_hash": "37ed859b413a52707325c8ca661f0b3a"
+  },
+  "components/LogoLine.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "3af52178640543b86288d0f9f5ec3c20",
+    "semantic_hash": "3af52178640543b86288d0f9f5ec3c20"
+  },
+  "components/ParticleBackground.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "464fb70af51bb29cd0d45c60c57cc2c3",
+    "semantic_hash": "464fb70af51bb29cd0d45c60c57cc2c3"
+  },
+  "components/PlaceholderImage.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "803d3372ebc007179e9e4163bd030335",
+    "semantic_hash": "803d3372ebc007179e9e4163bd030335"
+  },
+  "components/Section.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "f43497a6d12f97cd8dbf70f333c47afe",
+    "semantic_hash": "f43497a6d12f97cd8dbf70f333c47afe"
+  },
+  "components/StatCounter.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "e86eb3a0de033140f49bfb8b907f78e2",
+    "semantic_hash": "e86eb3a0de033140f49bfb8b907f78e2"
+  },
+  "components/StructuredData.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "2afc13bbf4e305bd85b1d04ecb6b8aee",
+    "semantic_hash": "2afc13bbf4e305bd85b1d04ecb6b8aee"
+  },
+  "components/TeamAvatar.tsx": {
+    "mtime": 1780034859.8157353,
+    "ast_hash": "14d6a0b4ca0deba6f7c8d575af0c9478",
+    "semantic_hash": "14d6a0b4ca0deba6f7c8d575af0c9478"
+  },
+  "components/TeamMemberCard.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "91c2866768ec1913b959dbf29896722e",
+    "semantic_hash": "91c2866768ec1913b959dbf29896722e"
+  },
+  "components/UnsplashImage.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "37559eb15d580a2407c21366b2dd91bf",
+    "semantic_hash": "37559eb15d580a2407c21366b2dd91bf"
+  },
+  "components/WaveDivider.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "638f0f309f96066c6f4d34cbace5b539",
+    "semantic_hash": "638f0f309f96066c6f4d34cbace5b539"
+  },
+  "components/illustrations/AbstractShapes.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "955219f1b97e157d257bce4526608417",
+    "semantic_hash": "955219f1b97e157d257bce4526608417"
+  },
+  "components/illustrations/AssessIcon.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "90a6237fd56cb5b400ccafb902fea2c8",
+    "semantic_hash": "90a6237fd56cb5b400ccafb902fea2c8"
+  },
+  "components/illustrations/CloseIcon.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "17412f22f63fafc318c45260ce5978eb",
+    "semantic_hash": "17412f22f63fafc318c45260ce5978eb"
+  },
+  "components/illustrations/DataAnalytics.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "76d32b9f0ef89c5d3d178a97076cd472",
+    "semantic_hash": "76d32b9f0ef89c5d3d178a97076cd472"
+  },
+  "components/illustrations/GridPattern.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "35b29d3757412212af0930bbe0740716",
+    "semantic_hash": "35b29d3757412212af0930bbe0740716"
+  },
+  "components/illustrations/HealthcareTech.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "9e110f6c24e85fd2c54917baa0e5e500",
+    "semantic_hash": "9e110f6c24e85fd2c54917baa0e5e500"
+  },
+  "components/illustrations/IdentifyIcon.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "7f94e35965523da7b5037b7e1c53baa3",
+    "semantic_hash": "7f94e35965523da7b5037b7e1c53baa3"
+  },
+  "components/illustrations/IllustrationShowcase.tsx": {
+    "mtime": 1780034859.8167353,
+    "ast_hash": "475d3d70ab067c01031caa26e9aa1da7",
+    "semantic_hash": "475d3d70ab067c01031caa26e9aa1da7"
+  },
+  "components/illustrations/Innovation.tsx": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "43d9cb0b3ffed42cd29ec7dfee168736",
+    "semantic_hash": "43d9cb0b3ffed42cd29ec7dfee168736"
+  },
+  "components/illustrations/TeamCollaboration.tsx": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "d7a33f63f9cb66e14e85018f36935d33",
+    "semantic_hash": "d7a33f63f9cb66e14e85018f36935d33"
+  },
+  "components/illustrations/WavePattern.tsx": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "e440218a123d1db60745c5f82faf6396",
+    "semantic_hash": "e440218a123d1db60745c5f82faf6396"
+  },
+  "components/illustrations/index.tsx": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "0c20e2f293c1f03066f9729439fd8419",
+    "semantic_hash": "0c20e2f293c1f03066f9729439fd8419"
+  },
+  "download_final_svgs.js": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "817668010880d010c459c0d893f797c3",
+    "semantic_hash": "817668010880d010c459c0d893f797c3"
+  },
+  "download_logos.js": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "0c88861a0fb6218e999488985fff111c",
+    "semantic_hash": "0c88861a0fb6218e999488985fff111c"
+  },
+  "eslint.config.mjs": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "f1e80e839db34357a0e228efe227e759",
+    "semantic_hash": "f1e80e839db34357a0e228efe227e759"
+  },
+  "lib/animations.ts": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "51d7ba47e358823ce4165d72db649f19",
+    "semantic_hash": "51d7ba47e358823ce4165d72db649f19"
+  },
+  "lib/structured-data.ts": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "3df7e62e8f631d5d1d5c3fc738cc8ad9",
+    "semantic_hash": "3df7e62e8f631d5d1d5c3fc738cc8ad9"
+  },
+  "next.config.ts": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "a06b071c29f6ecf1372bdec2b4065a14",
+    "semantic_hash": "a06b071c29f6ecf1372bdec2b4065a14"
+  },
+  "package.json": {
+    "mtime": 1780034859.8187351,
+    "ast_hash": "92c826be455265fe69cf4e4447a27d12",
+    "semantic_hash": "92c826be455265fe69cf4e4447a27d12"
+  },
+  "postcss.config.mjs": {
+    "mtime": 1780034859.8187351,
+    "ast_hash": "675899342e765a4d16acd75a53389101",
+    "semantic_hash": "675899342e765a4d16acd75a53389101"
+  },
+  "tsconfig.json": {
+    "mtime": 1780034859.9117353,
+    "ast_hash": "7831df54b0184c9a88a681bd02b3e9e4",
+    "semantic_hash": "7831df54b0184c9a88a681bd02b3e9e4"
+  },
+  "ANIMATIONS.md": {
+    "mtime": 1780034859.8127353,
+    "ast_hash": "d4575144ac285e0e55da76ba141218f9",
+    "semantic_hash": "d4575144ac285e0e55da76ba141218f9"
+  },
+  "ANIMATION_IMPLEMENTATION_SUMMARY.md": {
+    "mtime": 1780034859.8127353,
+    "ast_hash": "8d90b2194c4b30541885b637eb76ce5b",
+    "semantic_hash": "8d90b2194c4b30541885b637eb76ce5b"
+  },
+  "ANIMATION_QUICK_REFERENCE.md": {
+    "mtime": 1780034859.8127353,
+    "ast_hash": "02fe2cdc6902d8cdc9391e6a20be701c",
+    "semantic_hash": "02fe2cdc6902d8cdc9391e6a20be701c"
+  },
+  "ILLUSTRATIONS_COMPLETE.md": {
+    "mtime": 1780034859.8127353,
+    "ast_hash": "ebe9b5ff53016af30d3f0cfb66044570",
+    "semantic_hash": "ebe9b5ff53016af30d3f0cfb66044570"
+  },
+  "ILLUSTRATIONS_GUIDE.md": {
+    "mtime": 1780034859.8127353,
+    "ast_hash": "4d698ea94574ffe955d5e1b07d546eaf",
+    "semantic_hash": "4d698ea94574ffe955d5e1b07d546eaf"
+  },
+  "README.md": {
+    "mtime": 1780034859.8137352,
+    "ast_hash": "91d9a335810c0376df362ce1dc062122",
+    "semantic_hash": "91d9a335810c0376df362ce1dc062122"
+  },
+  "components/illustrations/README.md": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "e40e11fd5f320e5217e0b3e52e0cd35d",
+    "semantic_hash": "e40e11fd5f320e5217e0b3e52e0cd35d"
+  },
+  "components/illustrations/VISUAL_REFERENCE.md": {
+    "mtime": 1780034859.8177352,
+    "ast_hash": "bb0b81bdc1cc76a6eeead53c00431845",
+    "semantic_hash": "bb0b81bdc1cc76a6eeead53c00431845"
+  },
+  "public/robots.txt": {
+    "mtime": 1780034859.9117353,
+    "ast_hash": "60496dba2d27a0f75f86b1b40ddec5e3",
+    "semantic_hash": "60496dba2d27a0f75f86b1b40ddec5e3"
+  },
+  "public/apple-touch-icon.png": {
+    "mtime": 1780034859.8187351,
+    "ast_hash": "845773a610684cfbf160bed1fc10c325",
+    "semantic_hash": "845773a610684cfbf160bed1fc10c325"
+  },
+  "public/assets/digital.jpg": {
+    "mtime": 1780034859.8207352,
+    "ast_hash": "58010c7ed795f9892b16865507e4e10d",
+    "semantic_hash": "58010c7ed795f9892b16865507e4e10d"
+  },
+  "public/assets/execution.jpg": {
+    "mtime": 1780034859.8217351,
+    "ast_hash": "e8f0edc488554d5967a70ca99dc4aa01",
+    "semantic_hash": "e8f0edc488554d5967a70ca99dc4aa01"
+  },
+  "public/assets/hero.jpg": {
+    "mtime": 1780034859.8237352,
+    "ast_hash": "97951643ecc71520a91e56359d37fb67",
+    "semantic_hash": "97951643ecc71520a91e56359d37fb67"
+  },
+  "public/assets/partnerships.jpg": {
+    "mtime": 1780034859.8247352,
+    "ast_hash": "1b8051480357bd30f2f4ef2080045e16",
+    "semantic_hash": "1b8051480357bd30f2f4ef2080045e16"
+  },
+  "public/assets/philosophy.png": {
+    "mtime": 1780034859.8917353,
+    "ast_hash": "5690d90c1512039ec84b7426c4f5c6eb",
+    "semantic_hash": "5690d90c1512039ec84b7426c4f5c6eb"
+  },
+  "public/assets/watercolor-blob-blue.svg": {
+    "mtime": 1780034859.8927352,
+    "ast_hash": "007014c4198abfd011710f3f036a387a",
+    "semantic_hash": "007014c4198abfd011710f3f036a387a"
+  },
+  "public/assets/watercolor-blob-brown.svg": {
+    "mtime": 1780034859.8927352,
+    "ast_hash": "654708903f160d161f96afd1476d9cb9",
+    "semantic_hash": "654708903f160d161f96afd1476d9cb9"
+  },
+  "public/favicon-16.png": {
+    "mtime": 1780034859.8927352,
+    "ast_hash": "ab23bada01f4072f8f5e099878f17333",
+    "semantic_hash": "ab23bada01f4072f8f5e099878f17333"
+  },
+  "public/favicon-32.png": {
+    "mtime": 1780034859.8927352,
+    "ast_hash": "15922a518e39ab08920a3a6e9e311449",
+    "semantic_hash": "15922a518e39ab08920a3a6e9e311449"
+  },
+  "public/file.svg": {
+    "mtime": 1780034859.8927352,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "public/globe.svg": {
+    "mtime": 1780034859.8927352,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "public/icon-192.png": {
+    "mtime": 1780034859.8937352,
+    "ast_hash": "eb8cc035170249412ee75b94d3f7d0a4",
+    "semantic_hash": "eb8cc035170249412ee75b94d3f7d0a4"
+  },
+  "public/icon-512.png": {
+    "mtime": 1780034859.8937352,
+    "ast_hash": "5783d6144ae2c36a4e6b8aab2916c59d",
+    "semantic_hash": "5783d6144ae2c36a4e6b8aab2916c59d"
+  },
+  "public/logo.jpeg": {
+    "mtime": 1780034859.8937352,
+    "ast_hash": "d35145c18f6f80e10112e162437fc23a",
+    "semantic_hash": "d35145c18f6f80e10112e162437fc23a"
+  },
+  "public/logo.svg": {
+    "mtime": 1780034859.8937352,
+    "ast_hash": "22bdde4487ef3904a1b7ed2ff0c7f37a",
+    "semantic_hash": "22bdde4487ef3904a1b7ed2ff0c7f37a"
+  },
+  "public/logo/ADB.png": {
+    "mtime": 1780034859.8937352,
+    "ast_hash": "423e96de9e931ff5d3b8da2a105b6154",
+    "semantic_hash": "423e96de9e931ff5d3b8da2a105b6154"
+  },
+  "public/logo/Alvarez.png": {
+    "mtime": 1780034859.8937352,
+    "ast_hash": "5358a2d70eea236b934dade0bd42bc1d",
+    "semantic_hash": "5358a2d70eea236b934dade0bd42bc1d"
+  },
+  "public/logo/Biofarma.png": {
+    "mtime": 1780034859.8947353,
+    "ast_hash": "609ae1d837e3937f7469fb31f354cf15",
+    "semantic_hash": "609ae1d837e3937f7469fb31f354cf15"
+  },
+  "public/logo/Boston.png": {
+    "mtime": 1780034859.8957353,
+    "ast_hash": "da263a03b0488bd4bb4d9e53970069a5",
+    "semantic_hash": "da263a03b0488bd4bb4d9e53970069a5"
+  },
+  "public/logo/Deloitte.png": {
+    "mtime": 1780034859.8957353,
+    "ast_hash": "7bdf544c0e4fc5e77a1ded47f6ed58e2",
+    "semantic_hash": "7bdf544c0e4fc5e77a1ded47f6ed58e2"
+  },
+  "public/logo/Gates.png": {
+    "mtime": 1780034859.8957353,
+    "ast_hash": "f30135a9548090ceb1d5f658c94d63af",
+    "semantic_hash": "f30135a9548090ceb1d5f658c94d63af"
+  },
+  "public/logo/Gavi.png": {
+    "mtime": 1780034859.8957353,
+    "ast_hash": "7ad163d2be0f8c61a96e15001c59a222",
+    "semantic_hash": "7ad163d2be0f8c61a96e15001c59a222"
+  },
+  "public/logo/Google.png": {
+    "mtime": 1780034859.8967352,
+    "ast_hash": "9927b50d8af7749ee51196b0fac9a07c",
+    "semantic_hash": "9927b50d8af7749ee51196b0fac9a07c"
+  },
+  "public/logo/Google.webp": {
+    "mtime": 1780034859.8967352,
+    "ast_hash": "7692e89ea212c4af02263d81d33df042",
+    "semantic_hash": "7692e89ea212c4af02263d81d33df042"
+  },
+  "public/logo/Harvard.png": {
+    "mtime": 1780034859.8967352,
+    "ast_hash": "805949428f9d1d7b219f0c93820f7913",
+    "semantic_hash": "805949428f9d1d7b219f0c93820f7913"
+  },
+  "public/logo/IBM_logo.svg.png": {
+    "mtime": 1780034859.8977354,
+    "ast_hash": "1db707c0aca0d40816b6b23e48e479e2",
+    "semantic_hash": "1db707c0aca0d40816b6b23e48e479e2"
+  },
+  "public/logo/IQVIA.png": {
+    "mtime": 1780034859.8977354,
+    "ast_hash": "720c70e86153fcb5d28446ad6574d808",
+    "semantic_hash": "720c70e86153fcb5d28446ad6574d808"
+  },
+  "public/logo/IVI.png": {
+    "mtime": 1780034859.8977354,
+    "ast_hash": "7fe01f5a478df3e5816fea2c1f23c686",
+    "semantic_hash": "7fe01f5a478df3e5816fea2c1f23c686"
+  },
+  "public/logo/MSD.png": {
+    "mtime": 1780034859.8977354,
+    "ast_hash": "5f96bea8980286e1afafe2f407c47eae",
+    "semantic_hash": "5f96bea8980286e1afafe2f407c47eae"
+  },
+  "public/logo/Novo.png": {
+    "mtime": 1780034859.8977354,
+    "ast_hash": "0990bd4d21e32ad5d610309bacdf9f04",
+    "semantic_hash": "0990bd4d21e32ad5d610309bacdf9f04"
+  },
+  "public/logo/PATH.png": {
+    "mtime": 1780034859.8987353,
+    "ast_hash": "ace560b6791455f70dbd2139044649c5",
+    "semantic_hash": "ace560b6791455f70dbd2139044649c5"
+  },
+  "public/logo/Pitt.png": {
+    "mtime": 1780034859.8987353,
+    "ast_hash": "f1eb362c713b454e672dcaf19e39d7de",
+    "semantic_hash": "f1eb362c713b454e672dcaf19e39d7de"
+  },
+  "public/logo/UNICEF.png": {
+    "mtime": 1780034859.8987353,
+    "ast_hash": "b0a0cd40727d44767153bf5dcc298ec1",
+    "semantic_hash": "b0a0cd40727d44767153bf5dcc298ec1"
+  },
+  "public/logo/USDS.png": {
+    "mtime": 1780034859.8987353,
+    "ast_hash": "0d2738cc809d8e8f09fa4f0675fc18b9",
+    "semantic_hash": "0d2738cc809d8e8f09fa4f0675fc18b9"
+  },
+  "public/logo/USDS.svg": {
+    "mtime": 1780034859.8987353,
+    "ast_hash": "687e2efce5e5110a5792daa18fad4f27",
+    "semantic_hash": "687e2efce5e5110a5792daa18fad4f27"
+  },
+  "public/logo/UnitedHealth.png": {
+    "mtime": 1780034859.8987353,
+    "ast_hash": "411b6ce4eb680d4e4ef2a3848759e923",
+    "semantic_hash": "411b6ce4eb680d4e4ef2a3848759e923"
+  },
+  "public/logo/WHO.png": {
+    "mtime": 1780034859.8987353,
+    "ast_hash": "c6606f32bec2a2493e14129bbbee8e26",
+    "semantic_hash": "c6606f32bec2a2493e14129bbbee8e26"
+  },
+  "public/logo/WorldBank.png": {
+    "mtime": 1780034859.8997352,
+    "ast_hash": "f6d4b755d6f326e698831eb589535f9a",
+    "semantic_hash": "f6d4b755d6f326e698831eb589535f9a"
+  },
+  "public/logo/dobeon 1.svg": {
+    "mtime": 1780034859.8997352,
+    "ast_hash": "d93ac6d334be83f1da2c5190c3f8d04e",
+    "semantic_hash": "d93ac6d334be83f1da2c5190c3f8d04e"
+  },
+  "public/logo/dobeon 2.svg": {
+    "mtime": 1780034859.8997352,
+    "ast_hash": "7e47e587f84ef875c4dc5255d110abea",
+    "semantic_hash": "7e47e587f84ef875c4dc5255d110abea"
+  },
+  "public/logo/dobeon-icon.svg": {
+    "mtime": 1780034859.8997352,
+    "ast_hash": "030592f5c6ffa6e83203d5bd07b967c4",
+    "semantic_hash": "030592f5c6ffa6e83203d5bd07b967c4"
+  },
+  "public/next.svg": {
+    "mtime": 1780034859.8997352,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "public/photo/Gajen Sunthara.jpg": {
+    "mtime": 1780034859.8997352,
+    "ast_hash": "277be734e14c18393f76060371a521dc",
+    "semantic_hash": "277be734e14c18393f76060371a521dc"
+  },
+  "public/photo/Gajen.png": {
+    "mtime": 1780034859.9017353,
+    "ast_hash": "58bd793b805af4ae74a67be1cce8e800",
+    "semantic_hash": "58bd793b805af4ae74a67be1cce8e800"
+  },
+  "public/photo/Ivan Sini 2.jpg": {
+    "mtime": 1780034859.9027352,
+    "ast_hash": "11891b49a60c7c23921fcd0619fd24bb",
+    "semantic_hash": "11891b49a60c7c23921fcd0619fd24bb"
+  },
+  "public/photo/Ivan Sini.jpeg": {
+    "mtime": 1780034859.9027352,
+    "ast_hash": "197d018a5ea09980890fcd40ebd36fce",
+    "semantic_hash": "197d018a5ea09980890fcd40ebd36fce"
+  },
+  "public/photo/John Brownstein.png": {
+    "mtime": 1780034859.9037352,
+    "ast_hash": "ff4aca6ca3eba5791cfb4ca6d89b5a9b",
+    "semantic_hash": "ff4aca6ca3eba5791cfb4ca6d89b5a9b"
+  },
+  "public/photo/Kerrie Holley.jpg": {
+    "mtime": 1780034859.9037352,
+    "ast_hash": "4250fe2a43972b06ffa5084f99656096",
+    "semantic_hash": "4250fe2a43972b06ffa5084f99656096"
+  },
+  "public/photo/Paul Nielsen.jpg": {
+    "mtime": 1780034859.9037352,
+    "ast_hash": "2c96844ae6f0ce518fb10e92dc098a6f",
+    "semantic_hash": "2c96844ae6f0ce518fb10e92dc098a6f"
+  },
+  "public/photo/Sai Prasad.jpg": {
+    "mtime": 1780034859.9037352,
+    "ast_hash": "92c8efc63ad8b0003cba96c1d1fe81b3",
+    "semantic_hash": "92c8efc63ad8b0003cba96c1d1fe81b3"
+  },
+  "public/photo/Salman Subakat.jpg": {
+    "mtime": 1780034859.9047353,
+    "ast_hash": "e95e16346c1b8d1523f459e02c97c483",
+    "semantic_hash": "e95e16346c1b8d1523f459e02c97c483"
+  },
+  "public/photo/Seth Berkeley 2.jpeg": {
+    "mtime": 1780034859.9047353,
+    "ast_hash": "f13c99c1f3d478572c80da83bbbafe08",
+    "semantic_hash": "f13c99c1f3d478572c80da83bbbafe08"
+  },
+  "public/photo/Seth Berkeley.jpg": {
+    "mtime": 1780034859.9107354,
+    "ast_hash": "950ec3b8f01e3c04d82cbd559a4fb61f",
+    "semantic_hash": "950ec3b8f01e3c04d82cbd559a4fb61f"
+  },
+  "public/photo/Soleh Ayubi.png": {
+    "mtime": 1780034859.9117353,
+    "ast_hash": "bbed16c7c895475aa3f9337df7ef9e2f",
+    "semantic_hash": "bbed16c7c895475aa3f9337df7ef9e2f"
+  },
+  "public/vercel.svg": {
+    "mtime": 1780034859.9117353,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "public/window.svg": {
+    "mtime": 1780034859.9117353,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  }
+}

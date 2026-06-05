@@ -1,0 +1,570 @@
+{
+  "communities": {
+    "0": [
+      "components_illustrations_readme_md_overview",
+      "components_illustrations_visual_reference_md_overview",
+      "components_teamavatar",
+      "components_teamavatar_teamavatar",
+      "components_teamavatar_teamavatarprops",
+      "illustrations_abstractshapes",
+      "illustrations_assessicon",
+      "illustrations_closeicon",
+      "illustrations_closeicon_closeicon",
+      "illustrations_complete_md_close_icon",
+      "illustrations_complete_md_data_analytics",
+      "illustrations_complete_md_healthcare_tech",
+      "illustrations_complete_md_index",
+      "illustrations_complete_md_innovation",
+      "illustrations_complete_md_overview",
+      "illustrations_complete_md_team_avatar",
+      "illustrations_complete_md_team_collaboration",
+      "illustrations_dataanalytics",
+      "illustrations_gridpattern",
+      "illustrations_guide_md_overview",
+      "illustrations_healthcaretech",
+      "illustrations_identifyicon",
+      "illustrations_illustrationshowcase",
+      "illustrations_index",
+      "illustrations_innovation",
+      "illustrations_innovation_innovation",
+      "illustrations_teamcollaboration",
+      "illustrations_wavepattern"
+    ],
+    "1": [
+      "components_card",
+      "components_card_card",
+      "components_card_cardprops",
+      "components_glasscard",
+      "components_glasscard_glasscard",
+      "components_glasscard_glasscardprops",
+      "components_logoline",
+      "components_logoline_logoline",
+      "components_logoline_logolineprops",
+      "components_placeholderimage",
+      "components_placeholderimage_imagemap",
+      "components_section",
+      "components_section_section",
+      "components_section_sectionprops",
+      "lib_animations",
+      "lib_animations_animationvariants",
+      "lib_animations_durations",
+      "lib_animations_getanimationclasses",
+      "lib_animations_getstaggerdelay",
+      "lib_animations_getstaggerstyle",
+      "lib_animations_staggerdelays",
+      "lib_animations_useinview",
+      "lib_animations_useinviewcontinuous",
+      "lib_animations_useparallax"
+    ],
+    "2": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_exclude",
+      "tsconfig_include",
+      "tsconfig_paths"
+    ],
+    "3": [
+      "animation_implementation_summary_md_button_tsx",
+      "animation_implementation_summary_md_card_tsx",
+      "animation_implementation_summary_md_globals_css",
+      "animation_implementation_summary_md_header_tsx",
+      "animation_implementation_summary_md_hero_tsx",
+      "animation_implementation_summary_md_lib_animations",
+      "animation_implementation_summary_md_overview",
+      "animation_implementation_summary_md_page_tsx",
+      "animation_implementation_summary_md_section_tsx",
+      "readme_md_about_page",
+      "readme_md_contact_page",
+      "readme_md_dobeon_website",
+      "readme_md_footer",
+      "readme_md_home_page",
+      "readme_md_next_js",
+      "readme_md_services_page",
+      "readme_md_structured_data",
+      "readme_md_typescript",
+      "robots_txt_robots"
+    ],
+    "4": [
+      "harvard_logo",
+      "harvard_organization",
+      "ibm_logo_svg_logo",
+      "ibm_logo_svg_organization",
+      "iqvia_logo",
+      "iqvia_organization",
+      "ivi_logo",
+      "logo_collection",
+      "msd_logo",
+      "novo_logo",
+      "path_logo",
+      "pitt_logo",
+      "unicef_logo",
+      "unitedhealth_logo",
+      "usds_logo_png",
+      "usds_logo_svg"
+    ],
+    "5": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_next",
+      "package_dependencies_nodemailer",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_dev_turbo",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version"
+    ],
+    "6": [
+      "eslint_config",
+      "eslint_config_compat",
+      "eslint_config_dirname",
+      "eslint_config_filename",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_eslintrc",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_nodemailer",
+      "package_devdependencies_types_react",
+      "package_devdependencies_typescript",
+      "readme_md_tailwind"
+    ],
+    "7": [
+      "photo_directory",
+      "sai_prasad_person",
+      "sai_prasad_photo",
+      "salman_subakat_camera",
+      "salman_subakat_person",
+      "salman_subakat_photo",
+      "seth_berkeley_nikon_d800",
+      "seth_berkeley_person",
+      "seth_berkeley_photo",
+      "seth_berkeley_photoshop_cs4",
+      "soleh_ayubi_canva",
+      "soleh_ayubi_person",
+      "soleh_ayubi_photo"
+    ],
+    "8": [
+      "animation_quick_reference_md_overview",
+      "animations_md_animation_system",
+      "animations_md_button_component",
+      "animations_md_card_component",
+      "animations_md_get_animation_classes",
+      "animations_md_get_stagger_style",
+      "animations_md_globals_css",
+      "animations_md_hero_component",
+      "animations_md_section_component",
+      "animations_md_use_in_view",
+      "animations_md_use_parallax",
+      "lib_animations_usecountup"
+    ],
+    "9": [
+      "components_footer",
+      "components_footer_footer",
+      "components_header",
+      "components_header_header",
+      "components_logo",
+      "components_logo_logo",
+      "components_logo_logoprops"
+    ],
+    "10": [
+      "components_structureddata_structureddata",
+      "components_structureddata_structureddataprops",
+      "lib_structured_data",
+      "lib_structured_data_breadcrumbschema",
+      "lib_structured_data_organizationschema",
+      "lib_structured_data_personschema",
+      "lib_structured_data_serviceschema"
+    ],
+    "11": [
+      "download_final_svgs",
+      "download_final_svgs_download",
+      "download_final_svgs_fs",
+      "download_final_svgs_https",
+      "download_final_svgs_logos",
+      "download_final_svgs_processlogo"
+    ],
+    "12": [
+      "adb_png",
+      "alvarez_png",
+      "logos_concept",
+      "partnerships_jpg",
+      "philosophy_png"
+    ],
+    "13": [
+      "app_layout",
+      "app_layout_geistsans",
+      "app_layout_metadata",
+      "app_layout_playfair",
+      "app_layout_rootlayout"
+    ],
+    "14": [
+      "app_not_found",
+      "app_not_found_notfound",
+      "components_button",
+      "components_button_button",
+      "components_button_buttonprops"
+    ],
+    "15": [
+      "components_floatingicons",
+      "components_floatingicons_icon",
+      "components_hero",
+      "components_hero_hero",
+      "components_hero_heroprops"
+    ],
+    "16": [
+      "watercolor_blob_blue_svg",
+      "watercolor_blob_blue_svg_filter",
+      "watercolor_blob_brown_svg",
+      "watercolor_blob_brown_svg_filter",
+      "watercolor_blobs_concept"
+    ],
+    "17": [
+      "biofarma_logo",
+      "boston_logo",
+      "deloitte_logo",
+      "gates_logo"
+    ],
+    "18": [
+      "dobeon1_logo",
+      "dobeon_concept_brand",
+      "dobeonicon_logo",
+      "gajensunthara_photo"
+    ],
+    "19": [
+      "download_logos",
+      "download_logos_fs",
+      "download_logos_https",
+      "download_logos_logos"
+    ],
+    "20": [
+      "gavi_logo",
+      "google_logo_png",
+      "google_logo_webp",
+      "logo_assets"
+    ],
+    "21": [
+      "components_hudcard",
+      "components_hudcard_hudcard",
+      "components_hudcard_hudcardprops"
+    ],
+    "22": [
+      "components_particlebackground",
+      "components_particlebackground_particle",
+      "components_particlebackground_particlebackgroundprops"
+    ],
+    "23": [
+      "components_statcounter",
+      "components_statcounter_statcounter",
+      "components_statcounter_statcounterprops"
+    ],
+    "24": [
+      "digital_image",
+      "execution_image",
+      "hero_image"
+    ],
+    "25": [
+      "dobeon_concept_partners",
+      "who_logo",
+      "worldbank_logo"
+    ],
+    "26": [
+      "john_brownstein_photo",
+      "kerrie_holley_photo",
+      "paul_nielsen_photo"
+    ],
+    "27": [
+      "app_loading",
+      "app_loading_loading"
+    ],
+    "28": [
+      "app_manifest",
+      "app_manifest_manifest"
+    ],
+    "29": [
+      "app_page",
+      "app_page_home"
+    ],
+    "30": [
+      "app_robots",
+      "app_robots_robots"
+    ],
+    "31": [
+      "app_sitemap",
+      "app_sitemap_sitemap"
+    ],
+    "32": [
+      "components_engagement",
+      "components_engagement_engagement"
+    ],
+    "33": [
+      "components_floatingshapes",
+      "components_floatingshapes_shape"
+    ],
+    "34": [
+      "components_imagecarousel",
+      "components_imagecarousel_imagecarouselprops"
+    ],
+    "35": [
+      "components_teammembercard",
+      "components_teammembercard_teammembercardprops"
+    ],
+    "36": [
+      "components_unsplashimage",
+      "components_unsplashimage_unsplashimageprops"
+    ],
+    "37": [
+      "components_wavedivider",
+      "components_wavedivider_wavedividerprops"
+    ],
+    "38": [
+      "contact_page",
+      "contact_page_contact"
+    ],
+    "39": [
+      "contact_route",
+      "contact_route_post"
+    ],
+    "40": [
+      "gajen_photo",
+      "ivan_sini_photo"
+    ],
+    "41": [
+      "postcss_config",
+      "postcss_config_config"
+    ],
+    "42": [
+      "apple_touch_icon_png_icon"
+    ],
+    "43": [
+      "components_hudbackground"
+    ],
+    "44": [
+      "favicon_16_png_favicon"
+    ],
+    "45": [
+      "favicon_32_png_favicon"
+    ],
+    "46": [
+      "file_svg_file_icon"
+    ],
+    "47": [
+      "globe_svg_globe_icon"
+    ],
+    "48": [
+      "icon_192_png_icon"
+    ],
+    "49": [
+      "icon_512_png_icon"
+    ],
+    "50": [
+      "logo_jpeg_dobeon_logo_raster"
+    ],
+    "51": [
+      "logo_svg_dobeon_logo"
+    ],
+    "52": [
+      "next_config"
+    ],
+    "53": [
+      "next_svg_next_logo"
+    ],
+    "54": [
+      "vercel_svg_vercel_logo"
+    ],
+    "55": [
+      "window_svg_window_icon"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1693121693121693,
+    "1": 0.14855072463768115,
+    "2": 0.1,
+    "3": 0.16374269005847952,
+    "4": 0.20833333333333334,
+    "5": 0.13333333333333333,
+    "6": 0.15384615384615385,
+    "7": 0.19230769230769232,
+    "8": 0.19696969696969696,
+    "9": 0.2857142857142857,
+    "10": 0.2857142857142857,
+    "11": 0.4,
+    "12": 0.5,
+    "13": 0.4,
+    "14": 0.4,
+    "15": 0.4,
+    "16": 0.5,
+    "17": 1.0,
+    "18": 0.6666666666666666,
+    "19": 0.5,
+    "20": 0.8333333333333334,
+    "21": 0.6666666666666666,
+    "22": 0.6666666666666666,
+    "23": 0.6666666666666666,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "readme_md_dobeon_website",
+      "label": "Dobeon Website Project",
+      "degree": 15
+    },
+    {
+      "id": "illustrations_complete_md_overview",
+      "label": "Dobeon Illustrations Complete",
+      "degree": 14
+    },
+    {
+      "id": "animations_md_animation_system",
+      "label": "Animation System Documentation",
+      "degree": 13
+    },
+    {
+      "id": "components_illustrations_readme_md_overview",
+      "label": "Illustrations Components README",
+      "degree": 13
+    },
+    {
+      "id": "illustrations_complete_md_index",
+      "label": "illustrations/index.tsx",
+      "degree": 12
+    },
+    {
+      "id": "lib_animations_useinview",
+      "label": "useInView()",
+      "degree": 10
+    },
+    {
+      "id": "lib_animations_getanimationclasses",
+      "label": "getAnimationClasses()",
+      "degree": 10
+    },
+    {
+      "id": "animation_implementation_summary_md_overview",
+      "label": "Animation Implementation Summary",
+      "degree": 10
+    },
+    {
+      "id": "seth_berkeley_photo",
+      "label": "Seth Berkeley Photo",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Animation System Documentation",
+      "target": "useInViewContinuous()",
+      "source_files": [
+        "ANIMATIONS.md",
+        "lib/animations.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories; bridges separate communities; peripheral node `useInViewContinuous()` unexpectedly reaches hub `Animation System Documentation`"
+    },
+    {
+      "source": "Animation System Documentation",
+      "target": "useCountUp()",
+      "source_files": [
+        "ANIMATIONS.md",
+        "lib/animations.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories; peripheral node `useCountUp()` unexpectedly reaches hub `Animation System Documentation`"
+    },
+    {
+      "source": "Animation Quick Reference Guide",
+      "target": "Animation Implementation Summary",
+      "source_files": [
+        "ANIMATION_QUICK_REFERENCE.md",
+        "ANIMATION_IMPLEMENTATION_SUMMARY.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Animation Quick Reference Guide` unexpectedly reaches hub `Animation Implementation Summary`"
+    },
+    {
+      "source": "Animation Implementation Summary",
+      "target": "Animation System Documentation",
+      "source_files": [
+        "ANIMATION_IMPLEMENTATION_SUMMARY.md",
+        "ANIMATIONS.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "conceptually_related_to",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Animation Quick Reference Guide",
+      "target": "Animation System Documentation",
+      "source_files": [
+        "ANIMATION_QUICK_REFERENCE.md",
+        "ANIMATIONS.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "conceptually_related_to",
+      "why": "connects across different repos/directories; peripheral node `Animation Quick Reference Guide` unexpectedly reaches hub `Animation System Documentation`"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
